@@ -23,6 +23,15 @@ const props = {
 };
 
 const LandingPage = () => {
+
+  function buildUrl (val){
+
+    var host = window.location.hostname
+    host = "//"+host.replace("dashboard",val);
+    return host;
+
+  }
+
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
       <div className="bx--row landing-page__banner">
@@ -65,11 +74,11 @@ const LandingPage = () => {
                   <div className="bx--row resource-card-group">
                     <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Manage your build pipelines"
+                      subTitle="Managed your build pipelines"
                       title="Jenkins CI"
                       aspectRatio="2:1"
                       actionIcon="arrowRight"
-                      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+                      href={buildUrl("jenkins")}
                       >
                     ​
                       <img
