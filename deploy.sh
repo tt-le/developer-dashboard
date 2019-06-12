@@ -1,0 +1,1 @@
+helm install chart/catalyst-dashboard/ --namespace tools --set ingress.hosts[0]=dashboard.catalyst-team-cluster.us-south.containers.appdomain.cloud --name dashboard
