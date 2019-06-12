@@ -23,6 +23,14 @@ const props = {
 };
 
 const LandingPage = () => {
+  
+  function buildUrl (val) {
+    var host = window.location.hostname;
+    var protocol = window.location.protocol || "http:";
+    host = protocol+"//"+host.replace("dashboard",val);
+    return host;
+  }
+
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
       <div className="bx--row landing-page__banner">
@@ -59,7 +67,6 @@ const LandingPage = () => {
                     <p></p>
                     <br></br>
                     <Button>Learn more...</Button>
-
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
@@ -69,16 +76,13 @@ const LandingPage = () => {
                       title="Jenkins CI"
                       aspectRatio="2:1"
                       actionIcon="arrowRight"
-                      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-                      >
-                    ​
+                      href={buildUrl('jenkins')}
+                      >​
                       <img
                         className="resource-img"
                         src={`${process.env.PUBLIC_URL}/jenkins.png`}
                         alt="illustration"
-                      />
-
-                    ​
+                      />​
                     </ResourceCard>
                     </div>
                     <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
@@ -88,16 +92,13 @@ const LandingPage = () => {
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
                       disabled
-                      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-                      >
-                    ​
+                      href={buildUrl('artefactory')}
+                      >​
                     <img
                         className="resource-img"
                         src={`${process.env.PUBLIC_URL}/artifactory.png`}
                         alt="illustration"
                       />
-
-
                     </ResourceCard>
                     </div>
                     </div>
@@ -108,9 +109,8 @@ const LandingPage = () => {
                       title="SonarQube"
                       aspectRatio="2:1"
                       actionIcon="arrowRight"
-                      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
-                      >
-                    ​
+                      href={buildUrl('sonarqube')}                      
+                      >                    ​
                       <img
                         className="resource-img"
                         src={`${process.env.PUBLIC_URL}/sonarqube-dark.png`}
@@ -124,22 +124,16 @@ const LandingPage = () => {
                       subTitle="Test your microservice contracts"
                       title="Pact Testing"
                       aspectRatio="2:1"
-                      disabled
-                      href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
+                      href={buildUrl('pact')}
                       >
-
                       <img
                         className="resource-img"
                         src={`${process.env.PUBLIC_URL}/pact.png`}
                         alt="illustration"
                       />
-
-                    ​
                     </ResourceCard>
                     </div>
                     </div>
-
-                    
                   </div>
                 </div>
               </div>
