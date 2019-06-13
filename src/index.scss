@@ -6,6 +6,7 @@ $feature-flags: (
 @import 'carbon-components/scss/globals/scss/styles.scss';
 @import 'content/ResourceCard/resource-card.scss';
 @import 'content/ResourceCard/resource-card-group.scss';
+@import 'content/ArticleCard/article-card.scss';
 
 // Remove overrides once Carbon bugs are fixed upstream.
 
@@ -71,7 +72,8 @@ main {
 }
 
 .resource-img {
-  height:50px;
+  height:60px;
+  padding-bottom: 20px;
 }
 
 .resource-card-group

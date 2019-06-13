@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourceCard from '../ResourceCard';
+import ArticleCard from '../ArticleCard';
 
 import {
   Breadcrumb,
@@ -142,8 +143,90 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
-                    Rapidly build beautiful and accessible experiences. The
-                    Carbon kit contains all resources you need to get started.
+
+                    <h2 className="landing-page__subheading">
+                        Activation Education
+                    </h2>
+                    <br></br>
+                    <p>
+                    Use the following links to help you deep dive in IBM Cloud Garage development best practices
+                    </p>
+                    <br></br>
+                    <div className="bx--row">
+                    <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+
+                          <ArticleCard
+                            subTitle="subTitle"
+                            title="Title"
+                            author="Josh Black"
+                            date="April 29, 2019"
+                            readTime="Read time: 5 min"
+                            href="/"
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                          <ArticleCard
+                            title="Explore & Create"
+                            author="Josh Black"
+                            href="https://www.ibm.com"
+                            actionIcon="arrowRight"
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                          <ArticleCard
+                            title="Explore & Create a longer title example in this space"
+                            href="https://www.ibm.com"
+                            disabled
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                          <ArticleCard
+                            title="Explore & Create"
+                            color="dark"
+                            href="https://www.ibm.com"
+                            actionIcon="download"
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                          <ArticleCard
+                            title="Explore & Create"
+                            author="Josh Black"
+                            readTime="Read time: 5 min"
+                            color="dark"
+                            href="https://www.ibm.com"
+                            actionIcon="email"
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                          <ArticleCard
+                            title="Explore & Create"
+                            author="Josh Black"
+                            date="April 29, 2019"
+                            readTime="Read time: 5 min"
+                            color="dark"
+                            disabled
+                            >
+
+
+                        </ArticleCard>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>

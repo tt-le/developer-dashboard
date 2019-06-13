@@ -127,9 +127,9 @@ export default class ResourceCard extends React.Component {
       cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
     } else if (isLink === true) {
       cardContainer = (
-        //<Link to={href} className={carbonTileclassNames}>
+        <div to={href} className={carbonTileclassNames}>
           {cardContent}
-        //</Link>
+        </div>
       );
     } else {
       cardContainer = (

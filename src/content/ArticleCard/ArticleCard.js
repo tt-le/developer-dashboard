@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link } from 'gatsby';
 import Launch20 from '@carbon/icons-react/es/launch/20';
 import Download20 from '@carbon/icons-react/es/download/20';
 import ArrowRight20 from '@carbon/icons-react/es/arrow--right/20';
@@ -163,9 +162,9 @@ export default class ArticleCard extends React.Component {
       cardContainer = <div className={carbonTileclassNames}>{cardContent}</div>;
     } else if (isLink === true) {
       cardContainer = (
-        <Link to={href} className={carbonTileclassNames}>
+        <div to={href} className={carbonTileclassNames}>
           {cardContent}
-        </Link>
+        </div>
       );
     } else {
       cardContainer = (
