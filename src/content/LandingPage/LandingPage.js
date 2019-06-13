@@ -125,7 +125,7 @@ const LandingPage = () => {
 
                     <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Manage your build pipelines"
+                      subTitle="Managed your build pipelines"
                       title="Jenkins CI"
                       aspectRatio="2:1"
                       actionIcon="arrowRight"
