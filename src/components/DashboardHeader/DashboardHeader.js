@@ -19,7 +19,7 @@ const DashboardHeader = () => (
     <HeaderName element={Link} to="/" prefix="IBM">
       Cloud - Catalyst Tools
     </HeaderName>
-    <HeaderNavigation aria-label="Carbon Tutorial">
+    <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem element={Link} to="/repos">
         Repositories
       </HeaderMenuItem>

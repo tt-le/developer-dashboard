@@ -25,6 +25,57 @@ const props = {
 
 const LandingPage = () => {
   
+  var cndp = [ 
+  {title:"Kubernetes", author:"KataCoda",href:"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster",color:"dark"},
+  {title:"Docker", author:"Web",href:"/",color:"dark"},
+  {title:"Istio", author:"Video",href:"https://www.youtube.com/watch?v=1iyFq2VaL5Y",color:"dark"},            
+  {title:"DevOps", author:"PDF",href:"/",color:"dark"},            
+  {title:"Helm", author:"PDF",href:"/",color:"dark"},            
+  {title:"Helm", author:"PDF",href:"/",color:"dark"}            
+  ]
+
+  var cnd = [ {title:"Micro services", author:"PDF",href:"/",color:"dark"},
+  {title:"API Design", author:"PDF",href:"/",color:"dark"},
+  {title:"Pact Testing", author:"PDF",href:"/",color:"dark"},
+  {title:"Cloud Overview", author:"PDF",href:"/",color:"dark"},
+  {title:"Cloud Databases", author:"PDF",href:"/",color:"dark"}
+  ]
+
+  var gmd = [ 
+  {title:"Squad Leadership Guide", author:"PDF",href:"/",color:"dark"},
+  {title:"Pairing", author:"PDF",href:"/",color:"dark"},
+  {title:"Testing Overview", author:"PDF",href:"https://github.ibm.com/garage-catalyst/training-manual-student/blob/master/material/Testing/TDD-overview.pdf",color:"dark"},
+  {title:"TDD", author:"PDF",href:"/",color:"dark"},
+  {title:"UI Design", author:"PDF",href:"/",color:"dark"},
+  {title:"Angular/React", author:"PDF",href:"/",color:"dark"},
+  {title:"JavaScript/TypeScript", author:"PDF",href:"/",color:"dark"}
+  ]
+
+  function getArticles(data) {
+
+    let articles = []
+
+    // Outer loop to create parent
+    data.forEach(function(article,index){
+      //Create the parent and add the children
+      articles.push(      
+        <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+            <ArticleCard
+              title={article.title}
+              author={article.author}
+              href={article.href}
+              color={article.color}
+              actionIcon="arrowRight"
+              >
+          </ArticleCard>
+        </div>
+      );
+    });
+            
+    return articles;
+
+  }
+
   function buildUrl (val) {
     var host = window.location.hostname;
     var protocol = window.location.protocol || "http:";
@@ -38,7 +89,7 @@ const LandingPage = () => {
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="/">Catalyst Info</a>
+              <a href="https://w3.ibm.com/w3publisher/ibm-cloud-garage-catalyst">Catalyst Info</a>
             </BreadcrumbItem>
           </Breadcrumb>
           <h1 className="landing-page__heading">
@@ -71,6 +122,7 @@ const LandingPage = () => {
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
+
                     <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Manage your build pipelines"
@@ -88,7 +140,7 @@ const LandingPage = () => {
                     </div>
                     <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Store you assets and dependencies"
+                      subTitle="Store your assets and dependencies"
                       title="Artefactory"
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
@@ -143,9 +195,8 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
-
                     <h2 className="landing-page__subheading">
-                        Activation Education
+                        Garage Method Development
                     </h2>
                     <br></br>
                     <p>
@@ -153,78 +204,31 @@ const LandingPage = () => {
                     </p>
                     <br></br>
                     <div className="bx--row">
-                    <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+                      {getArticles(gmd)}
+                    </div>
 
-                          <ArticleCard
-                            subTitle="subTitle"
-                            title="Title"
-                            author="Josh Black"
-                            date="April 29, 2019"
-                            readTime="Read time: 5 min"
-                            href="/"
-                            >
+                    <h2 className="landing-page__subheading">
+                        Cloud-native Development
+                    </h2>
+                    <br></br>
+                    <p>
+                    Use the following links to help you deep dive in IBM Cloud Garage development best practices
+                    </p>
+                    <br></br>
+                    <div className="bx--row">
+                      {getArticles(cnd)}
+                    </div>
 
-
-                        </ArticleCard>
-                      </div>
-                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-                          <ArticleCard
-                            title="Explore & Create"
-                            author="Josh Black"
-                            href="https://www.ibm.com"
-                            actionIcon="arrowRight"
-                            >
-
-
-                        </ArticleCard>
-                      </div>
-                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-                          <ArticleCard
-                            title="Explore & Create a longer title example in this space"
-                            href="https://www.ibm.com"
-                            disabled
-                            >
-
-
-                        </ArticleCard>
-                      </div>
-                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-                          <ArticleCard
-                            title="Explore & Create"
-                            color="dark"
-                            href="https://www.ibm.com"
-                            actionIcon="download"
-                            >
-
-
-                        </ArticleCard>
-                      </div>
-                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-                          <ArticleCard
-                            title="Explore & Create"
-                            author="Josh Black"
-                            readTime="Read time: 5 min"
-                            color="dark"
-                            href="https://www.ibm.com"
-                            actionIcon="email"
-                            >
-
-
-                        </ArticleCard>
-                      </div>
-                      <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-                          <ArticleCard
-                            title="Explore & Create"
-                            author="Josh Black"
-                            date="April 29, 2019"
-                            readTime="Read time: 5 min"
-                            color="dark"
-                            disabled
-                            >
-
-
-                        </ArticleCard>
-                      </div>
+                    <h2 className="landing-page__subheading">
+                        Cloud-native Deployment
+                    </h2>
+                    <br></br>
+                    <p>
+                    Use the following links to help you deep dive in IBM Cloud Garage development best practices
+                    </p>
+                    <br></br>
+                    <div className="bx--row">
+                      {getArticles(cndp)}
                     </div>
 
                   </div>
@@ -246,11 +250,11 @@ const LandingPage = () => {
       </div>
       <div className="bx--row landing-page__r3">
         <div className="bx--col-md-4 bx--col-lg-4">
-          <h3 className="landing-page__label">The Principles</h3>
+          <h3 className="landing-page__label">IBM Garage Links</h3>
         </div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
+        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://github.ibm.com/garage-catalyst/planning" rel="noopener noreferrer" target="_blank">Planning</a></div>
+        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://github.ibm.com/garage-catalyst/planning/blob/master/docs/governance.md" rel="noopener noreferrer" target="_blank">Contribution</a></div>
+        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://www.ibm.com/cloud/garage/practices/overview" rel="noopener noreferrer" target="_blank">Garage Method</a></div>
       </div>
     </div>
   );
