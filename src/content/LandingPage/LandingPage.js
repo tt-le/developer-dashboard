@@ -7,7 +7,8 @@ import {
   BreadcrumbItem,
   Button,
   Tabs,
-  Tab
+  Tab,
+  CodeSnippet
 } from 'carbon-components-react';
 
 const props = {
@@ -21,6 +22,14 @@ const props = {
     role: 'presentation',
     tabIndex: 0,
   },
+  multiline: () => ({
+    showMoreText: 
+      'Text for "show more" button (showMoreText)',
+    showLessText: 
+      'Text for "show less" button (showLessText)',
+    onClick: 'onClick',
+  }),
+
 };
 
 const LandingPage = () => {
@@ -50,6 +59,13 @@ const LandingPage = () => {
   {title:"Angular/React", author:"PDF",href:"/",color:"dark"},
   {title:"JavaScript/TypeScript", author:"PDF",href:"/",color:"dark"}
   ]
+
+  var starterkits = [ 
+    {title:"12 UI Patterns with Carbon", author:"React",href:"/",color:"grey"},
+    {title:"12 UI Patterns with Carbon", author:"Angular",href:"/",color:"grey"},
+    {title:"Typescript Service", author:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+    {title:"Spring Boot", author:"Java",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+    ]
 
   function getArticles(data) {
 
@@ -82,6 +98,7 @@ const LandingPage = () => {
     host = protocol+"//"+host.replace("dashboard",val);
     return host;
   }
+  const multilineProps = props.multiline();
 
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
@@ -123,7 +140,7 @@ const LandingPage = () => {
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
 
-                    <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
+                    <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Managed your build pipelines"
                       title="Jenkins CI"
@@ -138,7 +155,7 @@ const LandingPage = () => {
                       />​
                     </ResourceCard>
                     </div>
-                    <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
+                    <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Store your assets and dependencies"
                       title="Artefactory"
@@ -156,7 +173,7 @@ const LandingPage = () => {
                     </div>
                     </div>
                     <div className="bx--row resource-card-group">
-                    <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Analyse and test your code"
                       title="SonarQube"
@@ -172,7 +189,7 @@ const LandingPage = () => {
 
                     </ResourceCard>
                     </div>
-                    <div className="bx--column bx--col-md-4 bx--offset-lg-4 bx--no-gutter-sm">
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Test your microservice contracts"
                       title="Pact Testing"
@@ -239,8 +256,35 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
-                    Carbon provides styles and components in Vanilla, React,
-                    Angular, and Vue for anyone building on the web.
+    
+    
+                    <h2 className="landing-page__subheading">
+                        Starter Kits Templates
+                    </h2>
+
+                    <p>
+                    To use the starter kits , click on the link and generate a template into your git organisation
+                    <br></br>
+                    </p>
+                    <br></br>
+
+                    <CodeSnippet type="multi" {...multilineProps}>
+                    {`
+                    npm i -g @garage-catalyst/ibm-garage-cloud-cli
+                    git clone <generated startkit template>
+                    igc register 
+                    `}
+                    </CodeSnippet>
+
+                    <br></br>
+                    <p>
+                    Use the following links to help acccelerate you code and bring constistent best practices into your project
+                    </p>
+                    <br></br>
+                    <div className="bx--row">
+                      {getArticles(starterkits)}
+                    </div>
+
                   </div>
                 </div>
               </div>
