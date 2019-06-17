@@ -1,6 +1,7 @@
 import React from 'react';
 import ResourceCard from '../ResourceCard';
 import ArticleCard from '../ArticleCard';
+import StarterKitCard from '../StarterKitCard';
 
 import {
   Breadcrumb,
@@ -35,37 +36,37 @@ const props = {
 const LandingPage = () => {
   
   var cndp = [ 
-  {title:"Kubernetes", author:"KataCoda",href:"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster",color:"dark"},
-  {title:"Docker", author:"Web",href:"/",color:"dark"},
-  {title:"Istio", author:"Video",href:"https://www.youtube.com/watch?v=1iyFq2VaL5Y",color:"dark"},            
-  {title:"DevOps", author:"PDF",href:"/",color:"dark"},            
-  {title:"Helm", author:"PDF",href:"/",color:"dark"},            
-  {title:"Helm", author:"PDF",href:"/",color:"dark"}            
+    {title:"Kubernetes", author:"KataCoda",href:"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster",color:"dark"},
+    {title:"Docker", author:"Web",href:"/",color:"dark"},
+    {title:"Istio", author:"Video",href:"https://www.youtube.com/watch?v=1iyFq2VaL5Y",color:"dark"},            
+    {title:"DevOps", author:"PDF",href:"/",color:"dark"},            
+    {title:"Helm", author:"PDF",href:"/",color:"dark"},            
+    {title:"Helm", author:"PDF",href:"/",color:"dark"}            
   ]
 
   var cnd = [ {title:"Micro services", author:"PDF",href:"/",color:"dark"},
-  {title:"API Design", author:"PDF",href:"/",color:"dark"},
-  {title:"Pact Testing", author:"PDF",href:"/",color:"dark"},
-  {title:"Cloud Overview", author:"PDF",href:"/",color:"dark"},
-  {title:"Cloud Databases", author:"PDF",href:"/",color:"dark"}
+    {title:"API Design", author:"PDF",href:"/",color:"dark"},
+    {title:"Pact Testing", author:"PDF",href:"/",color:"dark"},
+    {title:"Cloud Overview", author:"PDF",href:"/",color:"dark"},
+    {title:"Cloud Databases", author:"PDF",href:"/",color:"dark"}
   ]
 
   var gmd = [ 
-  {title:"Squad Leadership Guide", author:"PDF",href:"/",color:"dark"},
-  {title:"Pairing", author:"PDF",href:"/",color:"dark"},
-  {title:"Testing Overview", author:"PDF",href:"https://github.ibm.com/garage-catalyst/training-manual-student/blob/master/material/Testing/TDD-overview.pdf",color:"dark"},
-  {title:"TDD", author:"PDF",href:"/",color:"dark"},
-  {title:"UI Design", author:"PDF",href:"/",color:"dark"},
-  {title:"Angular/React", author:"PDF",href:"/",color:"dark"},
-  {title:"JavaScript/TypeScript", author:"PDF",href:"/",color:"dark"}
+    {title:"Squad Leadership Guide", author:"PDF",href:"/",color:"dark"},
+    {title:"Pairing", author:"PDF",href:"/",color:"dark"},
+    {title:"Testing Overview", author:"PDF",href:"https://github.ibm.com/garage-catalyst/training-manual-student/blob/master/material/Testing/TDD-overview.pdf",color:"dark"},
+    {title:"TDD", author:"PDF",href:"/",color:"dark"},
+    {title:"UI Design", author:"PDF",href:"/",color:"dark"},
+    {title:"Angular/React", author:"PDF",href:"/",color:"dark"},
+    {title:"JavaScript/TypeScript", author:"PDF",href:"/",color:"dark"}
   ]
 
   var starterkits = [ 
-    {title:"12 UI Patterns with Carbon", author:"React",href:"/",color:"grey"},
-    {title:"12 UI Patterns with Carbon", author:"Angular",href:"/",color:"grey"},
-    {title:"Typescript Service", author:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
-    {title:"Spring Boot", author:"Java",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
-    ]
+    {title:"React UI Patterns", subtitle:"Carbon based UI to help with common patterns using React framework",language:"React",href:"/",color:"grey"},
+    {title:"Angular UI Patterns", subtitle:"Carbon based UI to help with common patterns using Angular framework",language:"Angular",href:"/",color:"grey"},
+    {title:"Typescript Microservice", subtitle:"Node.js TypeScript Microservice offering OpenAPI endpoints",language:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+    {title:"Spring Boot Microservice", subtitle:"Spring Boot Java Microservices",language:"Java",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+  ]
 
   function getArticles(data) {
 
@@ -92,6 +93,31 @@ const LandingPage = () => {
 
   }
 
+  function getStarterKits(data) {
+
+    let starterkits = []
+
+    // Outer loop to create parent
+    data.forEach(function(starterkit,index){
+      //Create the parent and add the children
+      starterkits.push(      
+        <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
+            <StarterKitCard
+              title={starterkit.title}
+              subTitle={starterkit.subtitle}
+              language={starterkit.language}
+              href={starterkit.href}
+              color={starterkit.color}
+              actionIcon="download"
+              >              
+          </StarterKitCard>
+        </div>
+      );
+    });
+            
+    return starterkits;
+
+  }
   function buildUrl (val) {
     var host = window.location.hostname;
     var protocol = window.location.protocol || "http:";
@@ -262,27 +288,51 @@ const LandingPage = () => {
                         Starter Kits Templates
                     </h2>
 
-                    <p>
-                    To use the starter kits , click on the link and generate a template into your git organisation
-                    <br></br>
-                    </p>
-                    <br></br>
+                    <div className="code-snippets">
+                      <p>
+                      Follow the commands below to install the IBM Garage Catalyst CLI toos , these are designed 
+                      to help you work with you project code. Then login to the IBM Cloud account and configure your
+                      Kubernetes access from the operating system command line. 
+                       <br></br>
+                      </p>
+                      <br></br>
+                      <CodeSnippet type="multi" {...multilineProps}>
+                      {
+`
+npm i -g @garage-catalyst/ibm-garage-cloud-cli
+ibmcloud login -a cloud.ibm.com -r <region> -g <resource group>
+ibmcloud ks cluster-config --cluster <cluster-name>
+kubectrl get pods
+`}
+                      </CodeSnippet>
+                    </div>
 
-                    <CodeSnippet type="multi" {...multilineProps}>
-                    {`
-                    npm i -g @garage-catalyst/ibm-garage-cloud-cli
-                    git clone <generated startkit template>
-                    igc register 
-                    `}
-                    </CodeSnippet>
+                    <div className="code-snippets">
+                      <p>
+                      To use the starter kits templates, click on the link and generate a template into your oqn git organisation.
+                      Then clone it onto your local machine and then register it with your Jenkins CI server.
+                      <br></br>
+                      </p>
+                      <br></br>
 
+                      <CodeSnippet type="multi" {...multilineProps}>
+                      {
+`
+git clone <generated startkit template>
+igc rename <your project name> 
+igc register 
+
+`}
+                      </CodeSnippet>
+                    </div>
+
+                    <p className="new-line">
+                    Use the following links to generate a repo using the Github template feature. This will help acccelerate the start of your project
                     <br></br>
-                    <p>
-                    Use the following links to help acccelerate you code and bring constistent best practices into your project
                     </p>
                     <br></br>
                     <div className="bx--row">
-                      {getArticles(starterkits)}
+                      {getStarterKits(starterkits)}
                     </div>
 
                   </div>
