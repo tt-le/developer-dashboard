@@ -73,6 +73,15 @@
   padding-right:10px;
 }
 
+.#{$prefix}--github__icon--action {
+  position: relative;
+  float:right;
+}
+
+.#{$prefix}--github__icon--action img {
+  width: 20px;
+  height: 20px;
+}
 
 .#{$prefix}--article-card__icon--action {
   position: absolute;

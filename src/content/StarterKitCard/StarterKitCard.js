@@ -90,6 +90,7 @@ export default class StarterKitCard extends React.Component {
     if (href !== undefined) {
       isLink = href.charAt(0) === '/';
     }
+    let hrefGen = href+"/generate";
 
     const StarterKitCardClassNames = classnames([`${prefix}--article-card`], {
       [className]: className,
@@ -138,7 +139,19 @@ export default class StarterKitCard extends React.Component {
                       />            
                     ) : null}
                   </div>    
-                  {title}          
+                  {title}  
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={href}
+                  >  
+                  <div className={`${prefix}--github__icon--action`}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/github-icon.png`}
+                      alt="Github"
+                    />                              
+                  </div>      
+                  </a>
               </h4>
             ) : null}
 
@@ -179,6 +192,7 @@ export default class StarterKitCard extends React.Component {
                 <Error20 aria-label="disabled" />
               ) : null}
             </div>
+           
           </div>
         </div>
       </>
@@ -198,7 +212,7 @@ export default class StarterKitCard extends React.Component {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={href}
+          href={hrefGen}
           className={carbonTileclassNames}
         >
           {cardContent}

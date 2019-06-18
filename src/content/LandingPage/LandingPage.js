@@ -64,7 +64,7 @@ const LandingPage = () => {
   var starterkits = [ 
     {title:"React UI Patterns", subtitle:"Carbon based UI to help with common patterns using React framework",language:"React",href:"/",color:"grey"},
     {title:"Angular UI Patterns", subtitle:"Carbon based UI to help with common patterns using Angular framework",language:"Angular",href:"/",color:"grey"},
-    {title:"Typescript Microservice", subtitle:"Node.js TypeScript Microservice offering OpenAPI endpoints",language:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+    {title:"Typescript Microservice", subtitle:"Node.js TypeScript Microservice offering OpenAPI endpoints",language:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript",color:"grey"},
     {title:"Spring Boot Microservice", subtitle:"Spring Boot Java Microservices",language:"Java",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
   ]
 
