@@ -108,7 +108,7 @@ const LandingPage = () => {
               language={starterkit.language}
               href={starterkit.href}
               color={starterkit.color}
-              actionIcon="download"
+              actionIcon="launch"
               >              
           </StarterKitCard>
         </div>
@@ -166,20 +166,52 @@ const LandingPage = () => {
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
 
+                  <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                      <ResourceCard
+                        subTitle="Edit code with a web IDE"
+                        title="Eclipse Che"
+                        aspectRatio="2:1"
+                        href={buildUrl('che6')}
+                        >
+                          <img
+                          className="resource-img"
+                          src={`${process.env.PUBLIC_URL}/eclipse-che.png`}
+                          alt="illustration"
+                        />
+                        </ResourceCard>                    
+                      </div>
+  
+
+
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Managed your build pipelines"
-                      title="Jenkins CI"
-                      aspectRatio="2:1"
-                      actionIcon="arrowRight"
-                      href={buildUrl('jenkins')}
-                      >​
-                      <img
-                        className="resource-img"
-                        src={`${process.env.PUBLIC_URL}/jenkins.png`}
-                        alt="illustration"
-                      />​
-                    </ResourceCard>
+                        subTitle="Managed your build pipelines"
+                        title="Jenkins CI"
+                        aspectRatio="2:1"
+                        actionIcon="arrowRight"
+                        href={buildUrl('jenkins')}
+                        >​
+                        <img
+                          className="resource-img"
+                          src={`${process.env.PUBLIC_URL}/jenkins.png`}
+                          alt="Jenkins CD"
+                        />​
+                      </ResourceCard>
+                    </div>
+                    <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
+                      <ResourceCard
+                        subTitle="Managed your CD with GitOps"
+                        title="Argo CD"
+                        aspectRatio="2:1"
+                        actionIcon="arrowRight"
+                        href={buildUrl('argocd')}
+                        >​
+                        <img
+                          className="resource-img"
+                          src={`${process.env.PUBLIC_URL}/argo-cd.png`}
+                          alt="Argo CD"
+                        />​
+                      </ResourceCard>
                     </div>
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
@@ -197,38 +229,36 @@ const LandingPage = () => {
                       />
                     </ResourceCard>
                     </div>
-                    </div>
-                    <div className="bx--row resource-card-group">
                     <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Analyse and test your code"
-                      title="SonarQube"
-                      aspectRatio="2:1"
-                      actionIcon="arrowRight"
-                      href={buildUrl('sonarqube')}                      
-                      >                    ​
-                      <img
-                        className="resource-img"
-                        src={`${process.env.PUBLIC_URL}/sonarqube-dark.png`}
-                        alt="illustration"
-                      />
+                        subTitle="Analyse and test your code"
+                        title="SonarQube"
+                        aspectRatio="2:1"
+                        actionIcon="arrowRight"
+                        href={buildUrl('sonarqube')}                      
+                        >                    ​
+                        <img
+                          className="resource-img"
+                          src={`${process.env.PUBLIC_URL}/sonarqube-dark.png`}
+                          alt="illustration"
+                        />
 
-                    </ResourceCard>
+                      </ResourceCard>
                     </div>
                     <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
-                      subTitle="Test your microservice contracts"
-                      title="Pact Testing"
-                      aspectRatio="2:1"
-                      href={buildUrl('pact')}
-                      >
-                      <img
-                        className="resource-img"
-                        src={`${process.env.PUBLIC_URL}/pact.png`}
-                        alt="illustration"
-                      />
-                    </ResourceCard>
-                    </div>
+                        subTitle="Test your microservice contracts"
+                        title="Pact Testing"
+                        aspectRatio="2:1"
+                        href={buildUrl('pact')}
+                        >
+                          <img
+                          className="resource-img"
+                          src={`${process.env.PUBLIC_URL}/pact.png`}
+                          alt="illustration"
+                        />
+                        </ResourceCard>                    
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -319,7 +349,7 @@ kubectrl get pods
                       {
 `
 git clone <generated startkit template>
-igc rename <your project name> 
+igc rename-project <your project name> 
 igc register 
 
 `}

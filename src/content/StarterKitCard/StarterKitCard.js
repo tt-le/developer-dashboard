@@ -140,18 +140,7 @@ export default class StarterKitCard extends React.Component {
                     ) : null}
                   </div>    
                   {title}  
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={href}
-                  >  
-                  <div className={`${prefix}--github__icon--action`}>
-                    <img
-                      src={`${process.env.PUBLIC_URL}/github-icon.png`}
-                      alt="Github"
-                    />                              
-                  </div>      
-                  </a>
+                  
               </h4>
             ) : null}
 
@@ -164,7 +153,8 @@ export default class StarterKitCard extends React.Component {
 
             <div className={`${prefix}--article-card__info`}>
               {language ? (
-                <p className={`${prefix}--article-card__author`}>{language}</p>
+                <p className={`${prefix}--article-card__author`}>
+                {language}</p>
               ) : null}
               {date ? (
                 <p className={`${prefix}--article-card__date`}>{date}</p>
@@ -175,24 +165,43 @@ export default class StarterKitCard extends React.Component {
                 </p>
               ) : null}
             </div>
-            <div className={`${prefix}--article-card__icon--action`}>
-              {actionIcon === 'launch' && !disabled ? (
-                <Launch20 aria-label="Open" />
-              ) : null}
-              {actionIcon === 'arrowRight' && !disabled ? (
-                <ArrowRight20 aria-label="Open" />
-              ) : null}
-              {actionIcon === 'download' && !disabled ? (
-                <Download20 aria-label="Download" />
-              ) : null}
-              {actionIcon === 'email' && !disabled ? (
-                <Email20 aria-label="Email" />
-              ) : null}
-              {actionIcon === 'disabled' || disabled === true ? (
-                <Error20 aria-label="disabled" />
-              ) : null}
+
+            <div className="icon-row">
+             
+              <div className={`${prefix}--article-card__icon--action`}>
+              
+                {actionIcon === 'launch' && !disabled ? (
+                  <Launch20 aria-label="Open" />
+                ) : null}
+                {actionIcon === 'arrowRight' && !disabled ? (
+                  <ArrowRight20 aria-label="Open" />
+                ) : null}
+                {actionIcon === 'download' && !disabled ? (
+                  <Download20 aria-label="Download" />
+                ) : null}
+                {actionIcon === 'email' && !disabled ? (
+                  <Email20 aria-label="Email" />
+                ) : null}
+                {actionIcon === 'disabled' || disabled === true ? (
+                  <Error20 aria-label="disabled" />
+                ) : null}
+              </div>
+
+              <div className={`${prefix}--github__icon--action`}>
+                <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={href}
+                    >  
+                    <div>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/github-icon.png`}
+                        alt="Github"
+                      />                              
+                    </div>      
+                    </a>
+              </div>
             </div>
-           
           </div>
         </div>
       </>

@@ -87,9 +87,18 @@
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  width: 60px;
+  height: 20px;
+}
+
+.#{$prefix}--github__icon--action {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   width: 20px;
   height: 20px;
 }
+
 
 .#{$prefix}--article-card__icon--action svg {
   fill: $icon-01;
