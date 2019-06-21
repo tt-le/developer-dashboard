@@ -62,10 +62,10 @@ const LandingPage = () => {
   ]
 
   var starterkits = [ 
-    {title:"React UI Patterns", subtitle:"Carbon based UI to help with common patterns using React framework",language:"React",href:"/",color:"grey"},
-    {title:"Angular UI Patterns", subtitle:"Carbon based UI to help with common patterns using Angular framework",language:"Angular",href:"/",color:"grey"},
+    {title:"React UI Patterns", subtitle:"Carbon based UI to help with common patterns using React framework",language:"React",href:"https://github.com/ibm-garage-cloud/template-node-react",color:"grey"},
+    {title:"Angular UI Patterns", subtitle:"Carbon based UI to help with common patterns using Angular framework",language:"Angular",href:"https://github.com/ibm-garage-cloud/template-node-angular",color:"grey"},
     {title:"Typescript Microservice", subtitle:"Node.js TypeScript Microservice offering OpenAPI endpoints",language:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript",color:"grey"},
-    {title:"Spring Boot Microservice", subtitle:"Spring Boot Java Microservices",language:"Java",href:"https://github.com/ibm-garage-cloud/template-node-typescript/generate",color:"grey"},
+    {title:"Spring Boot Microservice", subtitle:"Spring Boot Java Microservices",language:"Java",href:"https://github.com/ibm-garage-cloud/template-java-spring",color:"grey"},
   ]
 
   function getArticles(data) {
@@ -313,15 +313,14 @@ const LandingPage = () => {
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
     
-    
                     <h2 className="landing-page__subheading">
-                        Starter Kits Templates
+                        Starter Kit Templates
                     </h2>
 
                     <div className="code-snippets">
                       <p>
-                      Follow the commands below to install the IBM Garage Catalyst CLI toos , these are designed 
-                      to help you work with you project code. Then login to the IBM Cloud account and configure your
+                      Follow the commands below to install the IBM Garage Catalyst CLI tools, these have been designed 
+                      to help you work with your project code. Login to the IBM Cloud account and configure your
                       Kubernetes access from the operating system command line. 
                        <br></br>
                       </p>
@@ -332,15 +331,15 @@ const LandingPage = () => {
 npm i -g @garage-catalyst/ibm-garage-cloud-cli
 ibmcloud login -a cloud.ibm.com -r <region> -g <resource group>
 ibmcloud ks cluster-config --cluster <cluster-name>
-kubectrl get pods
+kubectl get nodes
 `}
                       </CodeSnippet>
                     </div>
 
                     <div className="code-snippets">
                       <p>
-                      To use the starter kits templates, click on the link and generate a template into your oqn git organisation.
-                      Then clone it onto your local machine and then register it with your Jenkins CI server.
+                      To use the Starter Kit templates, click on the link and generate a template into your own git organization.
+                      Then clone it onto your local machine and then use igc to register it with your Jenkins CI server.
                       <br></br>
                       </p>
                       <br></br>
@@ -349,7 +348,7 @@ kubectrl get pods
                       {
 `
 git clone <generated startkit template>
-igc rename-project <your project name> 
+cd <generated startkit template>
 igc register 
 
 `}
