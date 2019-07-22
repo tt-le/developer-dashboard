@@ -1,5 +1,19 @@
-FROM nginx:alpine
+FROM registry.access.redhat.com/ubi8/nodejs-10
 
-COPY default.conf /etc/nginx/conf.d/
-COPY ./build /usr/share/nginx/html/
+RUN mkdir app
 
+WORKDIR app
+
+COPY package.json .
+COPY package-lock.json .
+COPY .env .
+COPY default.conf .
+COPY src/ ./src/
+COPY public/ ./public/
+COPY server/ ./server/
+
+RUN npm install
+
+RUN npm run build
+
+CMD ["npm", "start"]
