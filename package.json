@@ -1,22 +1,18 @@
 {
   "name": "catalyst-dashboard",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "org": "garagecatalyst",
+  "description": "IBM Garage Catalyst Development Tools Dashboard",
   "private": true,
-  "repository": "git@github.com:carbon-design-system/carbon-tutorial.git",
-  "bugs": "https://github.com/carbon-design-system/carbon-tutorial/issues",
-  "license": "Apache-2.0",
+  "engines": {
+    "node": "^8.11.1"
+  },
   "scripts": {
-    "build": "react-scripts build",
-    "ci-check": "yarn format:diff",
-    "clean": "yarn cache clean && yarn install",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.{js,md,scss}\"",
-    "format:diff": "prettier --list-different \"**/*.{js,md,scss}\"",
-    "format:staged": "prettier --write",
-    "start": "node server",
-    "start:dev": "react-scripts start",
-    "test": "react-scripts test",
+    "start": "node server/server.js",
+    "debug": "chmod +x run-debug && ./run-debug",
+    "test": "nyc mocha --exit",
+    "dev": "nodemon server/server.js",
+    "build": "cd client && npm run build",
     "build:image": "./scripts/build.sh $npm_package_name $npm_package_version",
     "pretest:image": "npm run build:image",
     "test:image": "npm run test:only",
@@ -25,71 +21,25 @@
     "push": "npm run push:only",
     "push:only": "./scripts/publish.sh $npm_package_org $npm_package_name $npm_package_version",
     "pull": "./scripts/pull.sh $npm_package_org $npm_package_name $npm_package_version",
-    "start:image": "docker run -p 8080:8080 $npm_package_name:$npm_package_version"
+    "start:image": "docker run -p 3001:3000 $npm_package_name:$npm_package_version ",
+    "generate-exports": "echo \"export IMAGE_NAME=\\\"$npm_package_name\\\";\nexport IMAGE_VERSION=\\\"$npm_package_version\\\";\nexport IMAGE_BUILD_NUMBER=\\\"$BUILD_NUMBER\\\";\nexport START_TIME=\\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\";\""
   },
-  "dependencies": {
-    "@carbon/grid": "^10.3.0",
-    "@carbon/icons-react": "^10.3.0",
-    "apollo-boost": "^0.4.2",
-    "carbon-components": "^10.3.0",
-    "carbon-components-react": "^7.3.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "express": "^4.17.1",
-    "graphql": "^14.3.1",
-    "react": "^16.8.6",
-    "react-apollo": "^2.5.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.0.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "@types/express": "^4.17.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.5",
-    "node-sass": "^4.12.0",
-    "prettier": "^1.17.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+  "nodemonConfig": {
+    "env": {
+      "NODE_HEAPDUMP_OPTIONS": "nosignal"
     }
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "ibm-cloud-env": "^0",
+    "log4js": "^3.0.5"
   },
-  "lint-staged": {
-    "*.js": [
-      "yarn format:staged",
-      "git add"
-    ],
-    "*.{scss,css}": [
-      "yarn format:staged",
-      "git add"
-    ],
-    "*.md": [
-      "yarn format:staged",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "jsxBracketSameLine": true,
-    "printWidth": 80,
-    "singleQuote": true,
-    "trailingComma": "es5"
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.12.1",
+    "nyc": "^13.1.0"
   }
 }

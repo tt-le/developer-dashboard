@@ -1,19 +1,22 @@
-FROM registry.access.redhat.com/ubi8/nodejs-10
+FROM registry.redhat.io/ubi8/nodejs-10
 
 RUN mkdir app
+RUN echo $PWD
 
-WORKDIR app
+# Install npm production packages
+COPY package.json ./app
+RUN cd ./app; npm install --production
 
-COPY package.json .
-COPY package-lock.json .
-COPY .env .
-COPY default.conf .
-COPY src/ ./src/
-COPY public/ ./public/
-COPY server/ ./server/
+COPY . ./app
 
-RUN npm install
+ENV NODE_ENV production
+ENV PORT 3000
 
-RUN npm run build
+EXPOSE 3000
+
+WORKDIR ./app
 
 CMD ["npm", "start"]
+
+
+
