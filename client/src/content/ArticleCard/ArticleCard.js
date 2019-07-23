@@ -114,14 +114,17 @@ export default class ArticleCard extends React.Component {
           <div
             className={`${prefix}--aspect-ratio--object ${prefix}--article-card__tile`}
           >
-            {subTitle ? (
-              <h5 className={`${prefix}--article-card__subtitle`}>
-                {subTitle}
-              </h5>
-            ) : null}
+
             {title ? (
               <h4 className={`${prefix}--article-card__title`}>{title}</h4>
             ) : null}
+
+            {subTitle ? (
+                <h5 className={`${prefix}--article-card__subtitle`}>
+                  {subTitle}
+                </h5>
+            ) : null}
+
             <div className={`${prefix}--article-card__info`}>
               {author ? (
                 <p className={`${prefix}--article-card__author`}>{author}</p>

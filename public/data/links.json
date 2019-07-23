@@ -1,0 +1,39 @@
+{ "cndp" : [
+    {"title":"Kubernetes", "subtitle": "Test Subtitle", "subtitle":"","author":"KataCoda","href":"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster","color":"dark"},
+    {"title":"Docker", "subtitle":"","author":"Web","href":"/","color":"dark"},
+    {"title":"Istio", "subtitle":"","author":"Video","href":"https://www.youtube.com/watch?v=1iyFq2VaL5Y","color":"dark"},
+    {"title":"DevOps", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"Helm", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"Helm", "subtitle":"","author":"PDF","href":"/","color":"dark"}
+  ],
+  "cnd" : [
+    {"title":"Micro services", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"API Design", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"Pact Testing", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"Cloud Overview", "subtitle":"","author":"PDF","href":"/","color":"dark"},
+    {"title":"Cloud Databases", "subtitle":"","author":"PDF","href":"/","color":"dark"}
+  ],
+  "gmd":[
+    {"title":"Squad Leadership Guide", "subtitle": "How to run an agile squad","author":"BOX","href":"https://ibm.ent.box.com/notes/310053942022","color":"dark"},
+    {"title":"Pair Programming", "subtitle":"Two developers work together on one task","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_pair_programming/","color":"dark"},
+    {"title":"Testing Overview", "subtitle":"Automated testing for CI/CD pipelines","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_automated_testing/","color":"dark"},
+    {"title":"Performance Testing", "subtitle":"Automated testing for CI/CD pipelines","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_performance_testing/","color":"dark"},
+    {"title":"Test Driven Development", "subtitle":"Write the tests before you write the code","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_test_driven_development/","color":"dark"},
+    {"title":"TDD Tutorial", "subtitle":"Write the tests before you write the code","author":"Link","href":"https://www.ibm.com/cloud/garage/tutorials/introduction-to-test-driven-development","color":"dark"},
+    {"title":"User Interface Design", "subtitle":"Creating an application's dashboard","author":"PDF","href":"https://github.ibm.com/garage-catalyst/training-manual-instructor/blob/master/material/UIDesign/ui-design.pdf","color":"dark"},
+    {"title":"JavaScript/TypeScript", "subtitle":"Develop with Node.js","author":"PDF","href":"https://github.ibm.com/garage-catalyst/training-manual-instructor/blob/master/material/Typescript/typescript.pdf","color":"dark"},
+    {"title":"Angular", "subtitle":"Develop dynamic web apps","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/tool_angular_js/","color":"dark"},
+    {"title":"React", "subtitle":"Develop dynamic web apps","author":"Link","href":"https://developer.ibm.com/articles/dissecting-react-native/","color":"dark"}
+
+  ],
+  "starterkits" : [
+  {"title":"React UI Patterns", "subtitle":"Carbon based UI to help with common patterns using React framework","language":"React","href":"https://github.com/ibm-garage-cloud/template-node-react","color":"grey"},
+  {"title":"Angular UI Patterns", "subtitle":"Carbon based UI to help with common patterns using Angular framework","language":"Angular","href":"https://github.com/ibm-garage-cloud/template-node-angular","color":"grey"},
+  {"title":"Typescript GraphQL", "subtitle":"Node.js TypeScript GraphQL Backend for Frontend","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-graphql-typescript","color":"grey"},
+  {"title":"Typescript Microservice", "subtitle":"Node.js TypeScript Microservice offering OpenAPI endpoints","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-node-typescript","color":"grey"},
+  {"title":"Spring Boot Microservice", "subtitle":"Spring Boot Java Microservices","language":"Java","href":"https://github.com/ibm-garage-cloud/template-java-spring","color":"grey"}
+  ],
+  "argocd" : [
+    {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"dark"}
+  ]
+}

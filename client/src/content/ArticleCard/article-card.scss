@@ -67,6 +67,10 @@
   color: $text-04;
 }
 
+.#{$prefix}--article-card--dark .#{$prefix}--article-card__subtitle {
+  color: $carbon--gray-30;
+}
+
 .#{$prefix}--article-card--dark .#{$prefix}--article-card__info {
   color: $carbon--gray-30; //$text-02 for gray 90 theme
 }

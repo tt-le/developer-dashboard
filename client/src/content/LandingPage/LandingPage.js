@@ -2,6 +2,7 @@ import React from 'react';
 import ResourceCard from '../ResourceCard';
 import ArticleCard from '../ArticleCard';
 import StarterKitCard from '../StarterKitCard';
+import _ from 'lodash';
 
 import {
   Breadcrumb,
@@ -24,62 +25,65 @@ const props = {
     tabIndex: 0,
   },
   multiline: () => ({
-    showMoreText: 
+    showMoreText:
       'Text for "show more" button (showMoreText)',
-    showLessText: 
+    showLessText:
       'Text for "show less" button (showLessText)',
     onClick: 'onClick',
   }),
 
 };
 
-const LandingPage = () => {
-  
-  var cndp = [ 
-    {title:"Kubernetes", author:"KataCoda",href:"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster",color:"dark"},
-    {title:"Docker", author:"Web",href:"/",color:"dark"},
-    {title:"Istio", author:"Video",href:"https://www.youtube.com/watch?v=1iyFq2VaL5Y",color:"dark"},            
-    {title:"DevOps", author:"PDF",href:"/",color:"dark"},            
-    {title:"Helm", author:"PDF",href:"/",color:"dark"},            
-    {title:"Helm", author:"PDF",href:"/",color:"dark"}            
-  ]
+export default class LandingPage extends React.Component {
 
-  var cnd = [ {title:"Micro services", author:"PDF",href:"/",color:"dark"},
-    {title:"API Design", author:"PDF",href:"/",color:"dark"},
-    {title:"Pact Testing", author:"PDF",href:"/",color:"dark"},
-    {title:"Cloud Overview", author:"PDF",href:"/",color:"dark"},
-    {title:"Cloud Databases", author:"PDF",href:"/",color:"dark"}
-  ]
+    // Configure the App
+    constructor(props) {
+        super(props);
 
-  var gmd = [ 
-    {title:"Squad Leadership Guide", author:"PDF",href:"/",color:"dark"},
-    {title:"Pairing", author:"PDF",href:"/",color:"dark"},
-    {title:"Testing Overview", author:"PDF",href:"https://github.ibm.com/garage-catalyst/training-manual-student/blob/master/material/Testing/TDD-overview.pdf",color:"dark"},
-    {title:"TDD", author:"PDF",href:"/",color:"dark"},
-    {title:"UI Design", author:"PDF",href:"/",color:"dark"},
-    {title:"Angular/React", author:"PDF",href:"/",color:"dark"},
-    {title:"JavaScript/TypeScript", author:"PDF",href:"/",color:"dark"}
-  ]
+        this.state = {
+            links: []
+        };
+    }
 
-  var starterkits = [ 
-    {title:"React UI Patterns", subtitle:"Carbon based UI to help with common patterns using React framework",language:"React",href:"https://github.com/ibm-garage-cloud/template-node-react",color:"grey"},
-    {title:"Angular UI Patterns", subtitle:"Carbon based UI to help with common patterns using Angular framework",language:"Angular",href:"https://github.com/ibm-garage-cloud/template-node-angular",color:"grey"},
-    {title:"Typescript Microservice", subtitle:"Node.js TypeScript Microservice offering OpenAPI endpoints",language:"TypeScript",href:"https://github.com/ibm-garage-cloud/template-node-typescript",color:"grey"},
-    {title:"Spring Boot Microservice", subtitle:"Spring Boot Java Microservices",language:"Java",href:"https://github.com/ibm-garage-cloud/template-java-spring",color:"grey"},
-  ]
+
+    // Load the Data into the Project
+    componentDidMount() {
+
+        var host = "http://"+window.location.hostname+":"+window.location.port;
+        console.log(host);
+
+        fetch(host+"/data/links.json")
+            .then(response => response.json())
+            .then(data =>
+              {
+                console.log(data);
+                this.setState({ links: data })
+              }
+            );
+    }
+
+render() {
 
   function getArticles(data) {
+
+    if (_.isUndefined(data))
+      return [];
 
     let articles = []
 
     // Outer loop to create parent
     data.forEach(function(article,index){
+
+      var subtitle = article.subtitle ? article.subtitle : "";
+
       //Create the parent and add the children
-      articles.push(      
+      articles.push(
+
         <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
             <ArticleCard
               title={article.title}
               author={article.author}
+              subTitle = {subtitle}
               href={article.href}
               color={article.color}
               actionIcon="arrowRight"
@@ -88,19 +92,22 @@ const LandingPage = () => {
         </div>
       );
     });
-            
+
     return articles;
 
   }
 
   function getStarterKits(data) {
 
+    if (_.isUndefined(data))
+      return [];
+
     let starterkits = []
 
     // Outer loop to create parent
     data.forEach(function(starterkit,index){
       //Create the parent and add the children
-      starterkits.push(      
+      starterkits.push(
         <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
             <StarterKitCard
               title={starterkit.title}
@@ -109,12 +116,12 @@ const LandingPage = () => {
               href={starterkit.href}
               color={starterkit.color}
               actionIcon="launch"
-              >              
+              >
           </StarterKitCard>
         </div>
       );
     });
-            
+
     return starterkits;
 
   }
@@ -125,6 +132,19 @@ const LandingPage = () => {
     return host;
   }
   const multilineProps = props.multiline();
+
+  const { links, isLoading, error } = this.state;
+
+  //var links= this.state.links ? this.state.links : [] ;
+
+
+  if (error) {
+        return <p>{error.message}</p>;
+  }
+
+  if (isLoading) {
+        return <p>Loading ...</p>;
+  }
 
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
@@ -151,7 +171,7 @@ const LandingPage = () => {
                       Tools Dashboard
                     </h2>
                     <p className="landing-page__p">
-                      The tools dashboard gives you easy access to the provisioned tools in your development 
+                      The tools dashboard gives you easy access to the provisioned tools in your development
                       Kubernetes clusters..
                     </p>
                     <img
@@ -178,7 +198,7 @@ const LandingPage = () => {
                           src={`${process.env.PUBLIC_URL}/eclipse-che.png`}
                           alt="illustration"
                         />
-                        </ResourceCard>                    
+                        </ResourceCard>
                       </div>
 
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
@@ -233,7 +253,7 @@ const LandingPage = () => {
                         title="SonarQube"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
-                        href={buildUrl('sonarqube')}                      
+                        href={buildUrl('sonarqube')}
                         >                    ​
                         <img
                           className="resource-img"
@@ -255,7 +275,7 @@ const LandingPage = () => {
                           src={`${process.env.PUBLIC_URL}/pact.png`}
                           alt="illustration"
                         />
-                        </ResourceCard>                    
+                        </ResourceCard>
                       </div>
                     </div>
                   </div>
@@ -275,7 +295,7 @@ const LandingPage = () => {
                     </p>
                     <br></br>
                     <div className="bx--row">
-                      {getArticles(gmd)}
+                      {getArticles(links.gmd)}
                     </div>
 
                     <h2 className="landing-page__subheading">
@@ -287,7 +307,7 @@ const LandingPage = () => {
                     </p>
                     <br></br>
                     <div className="bx--row">
-                      {getArticles(cnd)}
+                      {getArticles(links.cnd)}
                     </div>
 
                     <h2 className="landing-page__subheading">
@@ -299,7 +319,7 @@ const LandingPage = () => {
                     </p>
                     <br></br>
                     <div className="bx--row">
-                      {getArticles(cndp)}
+                      {getArticles(links.cndp)}
                     </div>
 
                   </div>
@@ -310,16 +330,16 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
-    
+
                     <h2 className="landing-page__subheading">
                         Starter Kit Templates
                     </h2>
 
                     <div className="code-snippets">
                       <p>
-                      Follow the commands below to install the IBM Garage Catalyst CLI tools, these have been designed 
+                      Follow the commands below to install the IBM Garage Catalyst CLI tools, these have been designed
                       to help you work with your project code. Login to the IBM Cloud account and configure your
-                      Kubernetes access from the operating system command line. 
+                      Kubernetes access from the operating system command line.
                        <br></br>
                       </p>
                       <br></br>
@@ -359,7 +379,20 @@ igc register
                     </p>
                     <br></br>
                     <div className="bx--row">
-                      {getStarterKits(starterkits)}
+                      {getStarterKits(links.starterkits)}
+                    </div>
+
+                    <h2 className="landing-page__subheading">
+                      ArgoCD Templates
+                    </h2>
+                    <br></br>
+                    <p>
+                      Use the following templates to configure GitOps for your applications using ArgoCD
+                    </p>
+                    <br></br>
+
+                    <div className="bx--row">
+                      {getStarterKits(links.argocd)}
                     </div>
 
                   </div>
@@ -379,6 +412,5 @@ igc register
       </div>
     </div>
   );
-};
+}};
 
-export default LandingPage;
