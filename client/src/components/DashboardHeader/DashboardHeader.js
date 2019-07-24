@@ -20,8 +20,13 @@ const DashboardHeader = () => (
       Garage - Catalyst Tools
     </HeaderName>
     <HeaderNavigation aria-label="Repositories">
-      <HeaderMenuItem element={Link} to="/repos">
-        Repositories
+      <HeaderMenuItem href="https://cloud.ibm.com/" target="_blank">
+        IBM Cloud Console
+      </HeaderMenuItem>
+    </HeaderNavigation>
+    <HeaderNavigation aria-label="Repositories">
+      <HeaderMenuItem href="https://github.com/ibm-garage-cloud" target="_blank">
+          Repositories
       </HeaderMenuItem>
     </HeaderNavigation>
     <HeaderGlobalBar>

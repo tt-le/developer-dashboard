@@ -383,11 +383,11 @@ igc register
                     </div>
 
                     <h2 className="landing-page__subheading">
-                      ArgoCD Templates
+                      Other Templates
                     </h2>
                     <br></br>
                     <p>
-                      Use the following templates to configure GitOps for your applications using ArgoCD
+                      Use the following templates to configure GitOps and integrate IBM Cloud services into your applications
                     </p>
                     <br></br>
 

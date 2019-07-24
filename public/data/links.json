@@ -1,17 +1,29 @@
 { "cndp" : [
-    {"title":"Kubernetes", "subtitle": "Test Subtitle", "subtitle":"","author":"KataCoda","href":"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster","color":"dark"},
-    {"title":"Docker", "subtitle":"","author":"Web","href":"/","color":"dark"},
-    {"title":"Istio", "subtitle":"","author":"Video","href":"https://www.youtube.com/watch?v=1iyFq2VaL5Y","color":"dark"},
-    {"title":"DevOps", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"Helm", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"Helm", "subtitle":"","author":"PDF","href":"/","color":"dark"}
+    {"title":"Docker", "subtitle":"Package a Linux program for portability","author":"Web","href":"https://www.ibm.com/cloud/garage/practices/run/tool_ibm_container/","color":"dark"},
+    {"title":"Docker Class", "subtitle":"Package a Linux program for portability","author":"Web","href":"https://www.ibm.com/cloud/garage/content/course/containers-and-docker/","color":"dark"},
+    {"title":"Kubernetes", "subtitle": "Deploy applications across a cluster of hosts", "subtitle":"Online Class","author":"KataCoda","href":"https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster","color":"dark"},
+    {"title":"Kubernetes 101 Class", "subtitle": "Deploy applications across a cluster of hosts", "subtitle":"Online Class","author":"KataCoda","href":"https://www.ibm.com/cloud/garage/content/course/kubernetes-101/","color":"dark"},
+    {"title":"Kubernetes Intermediate", "subtitle": "Deploy applications across a cluster of hosts", "subtitle":"Online Class","author":"KataCoda","href":"https://www.ibm.com/cloud/garage/content/course/kubernetes-intermediate/","color":"dark"},
+    {"title":"Kubernetes Class", "subtitle": "Deploy applications across a cluster of hosts", "subtitle":"Online Class","author":"KataCoda","href":"https://cognitiveclass.ai/courses/kubernetes-course/","color":"dark"},
+    {"title":"Helm Class", "subtitle":"A package manager for Kubernetes","author":"Link","href":"https://www.ibm.com/cloud/garage/content/course/helm-fundamentals/","color":"dark"},
+    {"title":"Helm Recipe", "subtitle":"A package manager for Kubernetes","author":"Link","href":"https://developer.ibm.com/recipes/tutorials/increase-deployment-velocity-with-kubernetes-helm-charts/","color":"dark"},
+    {"title":"Istio", "subtitle":"A service mesh for containers in Kubernetes","author":"Link","href":"https://www.ibm.com/cloud/learn/istio","color":"dark"},
+    {"title":"Istio Tutorial", "subtitle":"A service mesh for containers in Kubernetes","author":"Link","href":"https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain","color":"dark"},
+    {"title":"DevOps CI", "subtitle":"Continuous delivery with a delivery pipeline","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/deliver/practice_delivery_pipeline/","color":"dark"},
+    {"title":"DevOps CD", "subtitle":"Continuous delivery with a delivery pipeline","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/deliver/practice_continuous_delivery/","color":"dark"}
   ],
   "cnd" : [
-    {"title":"Micro services", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"API Design", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"Pact Testing", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"Cloud Overview", "subtitle":"","author":"PDF","href":"/","color":"dark"},
-    {"title":"Cloud Databases", "subtitle":"","author":"PDF","href":"/","color":"dark"}
+    {"title":"Cloud Overview", "subtitle":"The fundamentals of cloud computing","author":"Link","href":"https://developer.ibm.com/articles/cl-best-practices-deploying-apps-in-cloud/","color":"dark"},
+    {"title":"Cloud Essentials", "subtitle":"The fundamentals of cloud computing","author":"Link","href":"https://cognitiveclass.ai/courses/ibm-cloud-essentials/","color":"dark"},
+    {"title":"12 Factor Applications", "subtitle":"Best practices for cloud applications","author":"Link","href":"https://developer.ibm.com/courses-center/twelve-factor-app-methodology-dwc002/","color":"dark"},
+    {"title":"Microservices", "subtitle":"Compose an application from business tasks","author":"Link","href":"https://www.ibm.com/cloud/garage/architectures/microservices","color":"dark"},
+    {"title":"Microservices Architecture", "subtitle":"Compose an application from business tasks","author":"Link","href":"https://developer.ibm.com/articles/challenges-and-benefits-of-the-microservice-architectural-style-part-1/","color":"dark"},
+    {"title":"Microservices Class", "subtitle":"Compose an application from business tasks","author":"PDF","href":"/","color":"dark"},
+    {"title":"API Design Method", "subtitle":"Expose functionality and hide implementation","author":"Link","href":"https://www.ibm.com/cloud/garage/content/tracks/api_track_overview","color":"dark"},
+    {"title":"API Design Architecture", "subtitle":"Expose functionality and hide implementation","author":"Link","href":"https://www.ibm.com/cloud/garage/architectures/apiArchitecture/","color":"dark"},
+    {"title":"Pact Testing Method", "subtitle":"Functional testing at the API level","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/contract-driven-testing","color":"dark"},
+    {"title":"Pact Testing Class", "subtitle":"Expose functionality and hide implementation","author":"Link","href":"https://www.ibm.com/cloud/garage/content/course/explore-garage-method-for-cloud/36","color":"dark"},
+    {"title":"Cloud Databases", "subtitle":"Managed services for persisting data","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/think/define-data-strategy/","color":"dark"}
   ],
   "gmd":[
     {"title":"Squad Leadership Guide", "subtitle": "How to run an agile squad","author":"BOX","href":"https://ibm.ent.box.com/notes/310053942022","color":"dark"},
@@ -34,6 +46,9 @@
   {"title":"Spring Boot Microservice", "subtitle":"Spring Boot Java Microservices","language":"Java","href":"https://github.com/ibm-garage-cloud/template-java-spring","color":"grey"}
   ],
   "argocd" : [
-    {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"dark"}
+    {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},
+    {"title":"IBM Cloud Services", "subtitle":"Code Snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"},
+    {"title":"Garage Assets", "subtitle":"Other Garage Code assets, some of these are not enabled for Catalyst","language":"Various","href":"https://ibm.ent.box.com/notes/317998900286","color":"grey"}
+
   ]
 }
