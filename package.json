@@ -8,6 +8,7 @@
     "node": "^8.11.1"
   },
   "scripts": {
+    "postinstall": "cd client && npm i",
     "start": "node server/server.js",
     "debug": "chmod +x run-debug && ./run-debug",
     "test": "nyc mocha --exit",
@@ -17,7 +18,7 @@
     "pretest:image": "npm run build:image",
     "test:image": "npm run test:only",
     "test:only": "./scripts/test.sh $npm_package_name $npm_package_version",
-    "prepush": "npm test",
+    "prepush": "npm run test:image",
     "push": "npm run push:only",
     "push:only": "./scripts/publish.sh $npm_package_org $npm_package_name $npm_package_version",
     "pull": "./scripts/pull.sh $npm_package_org $npm_package_name $npm_package_version",
@@ -34,7 +35,8 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "ibm-cloud-env": "^0",
-    "log4js": "^3.0.5"
+    "log4js": "^3.0.5",
+    "node-sass": "^4.12.0"
   },
   "devDependencies": {
     "chai": "^4.0.0",

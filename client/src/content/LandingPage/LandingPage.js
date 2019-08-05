@@ -52,14 +52,26 @@ export default class LandingPage extends React.Component {
         var host = "http://"+window.location.hostname+":"+window.location.port;
         console.log(host);
 
-        fetch(host+"/data/links.json")
-            .then(response => response.json())
-            .then(data =>
-              {
-                console.log(data);
-                this.setState({ links: data })
-              }
-            );
+        fetch(host + "/urls")
+          .then(response => response.json())
+          .then(data => {
+            console.log('urls', data);
+            this.setState(Object.assign(
+              {},
+              this.state,
+              {componentUrls: data},
+            ));
+          });
+        fetch(host + "/data/links.json")
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            this.setState(Object.assign(
+              {},
+              this.state,
+              {links: data},
+            ));
+          });
     }
 
 render() {
@@ -126,14 +138,14 @@ render() {
 
   }
   function buildUrl (val) {
-    var host = window.location.hostname;
-    var protocol = window.location.protocol || "http:";
-    host = protocol+"//"+host.replace("dashboard",val);
-    return host;
+    const host = window.location.hostname;
+    const protocol = window.location.protocol || "http:";
+
+    return componentUrls[val] || protocol + "//" + host.replace("dashboard", val);
   }
   const multilineProps = props.multiline();
 
-  const { links, isLoading, error } = this.state;
+  const { links, isLoading, error, componentUrls = {} } = this.state;
 
   //var links= this.state.links ? this.state.links : [] ;
 
