@@ -1,2 +1,2 @@
-helm install chart/catalyst-dashboard/ --namespace tools --set ingress.hosts[0]=dashboard.showcase-dev-cluster.us-south.containers.appdomain.cloud,image.pullPolicy=Always --name dashboard
+helm template chart/catalyst-dashboard/ --namespace tools --set ingress.hosts[0]=dashboard.showcase-dev-iks-cluster.us-south.containers.appdomain.cloud,image.pullPolicy=Always --name dashboard | kubectl apply -n tools -f -
 #helm install chart/catalyst-dashboard/ --namespace tools --set ingress.hosts[0]=dashboard.catalyst-team-cluster.us-south.containers.appdomain.cloud,image.pullPolicy=Always --name dashboard
