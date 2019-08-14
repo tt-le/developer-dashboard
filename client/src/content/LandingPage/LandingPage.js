@@ -246,11 +246,11 @@ render() {
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
                       subTitle="Store your assets and dependencies"
-                      title="Artefactory"
+                      title="Artifactory"
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
                       disabled
-                      href={buildUrl('artefactory')}
+                      href={buildUrl('artifactory')}
                       >​
                     <img
                         className="resource-img"
