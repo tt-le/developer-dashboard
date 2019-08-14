@@ -39,11 +39,12 @@
 
   ],
   "starterkits" : [
-  {"title":"React UI Patterns", "subtitle":"Carbon based UI to help with common patterns using React framework","language":"React","href":"https://github.com/ibm-garage-cloud/template-node-react","color":"grey"},
-  {"title":"Angular UI Patterns", "subtitle":"Carbon based UI to help with common patterns using Angular framework","language":"Angular","href":"https://github.com/ibm-garage-cloud/template-node-angular","color":"grey"},
-  {"title":"Typescript GraphQL", "subtitle":"Node.js TypeScript GraphQL Backend for Frontend","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-graphql-typescript","color":"grey"},
-  {"title":"Typescript Microservice", "subtitle":"Node.js TypeScript Microservice offering OpenAPI endpoints","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-node-typescript","color":"grey"},
-  {"title":"Spring Boot Microservice", "subtitle":"Spring Boot Java Microservices","language":"Java","href":"https://github.com/ibm-garage-cloud/template-java-spring","color":"grey"}
+  {"title":"React Core", "subtitle":"A base React template to get you started with UI best practices","language":"React","href":"https://github.ibm.com/bluemix-garage/create-react-app-starter","color":"light"},
+  {"title":"React UI Patterns", "subtitle":"Carbon based UI to help with common patterns using React framework","language":"React","href":"https://github.com/ibm-garage-cloud/template-node-react","color":"light"},
+  {"title":"Angular UI Patterns", "subtitle":"Carbon based UI to help with common patterns using Angular framework","language":"Angular","href":"https://github.com/ibm-garage-cloud/template-node-angular","color":"light"},
+  {"title":"Typescript GraphQL", "subtitle":"Node.js TypeScript GraphQL Backend for Frontend","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-graphql-typescript","color":"light"},
+  {"title":"Typescript Microservice", "subtitle":"Node.js TypeScript Microservice offering OpenAPI endpoints","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-node-typescript","color":"light"},
+  {"title":"Spring Boot Microservice", "subtitle":"Spring Boot Java Microservices","language":"Java","href":"https://github.com/ibm-garage-cloud/template-java-spring","color":"light"}
   ],
   "argocd" : [
     {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},

@@ -1,6 +1,6 @@
 {
   "name": "catalyst-dashboard",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "org": "garagecatalyst",
   "description": "IBM Garage Catalyst Development Tools Dashboard",
   "private": true,

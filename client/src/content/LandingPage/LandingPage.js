@@ -249,7 +249,6 @@ render() {
                       title="Artifactory"
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
-                      disabled
                       href={buildUrl('artifactory')}
                       >​
                     <img
@@ -315,7 +314,7 @@ render() {
                     </h2>
                     <br></br>
                     <p>
-                    Use the following links to help you deep dive in IBM Cloud Garage development best practices
+                    Use the following links to help you deep dive in Cloud Native Development
                     </p>
                     <br></br>
                     <div className="bx--row">
@@ -327,7 +326,7 @@ render() {
                     </h2>
                     <br></br>
                     <p>
-                    Use the following links to help you deep dive in IBM Cloud Garage development best practices
+                    Use the following links to help you deep dive in Cloud Native Deployment
                     </p>
                     <br></br>
                     <div className="bx--row">
@@ -347,46 +346,36 @@ render() {
                         Starter Kit Templates
                     </h2>
 
-                    <div className="code-snippets">
+                    <div>
                       <p>
-                      Follow the commands below to install the IBM Garage Catalyst CLI tools, these have been designed
+                      Follow the commands below to install the IBM Garage Catalyst CLI tools, this has been designed
                       to help you work with your project code. Login to the IBM Cloud account and configure your
-                      Kubernetes access from the operating system command line.
-                       <br></br>
+                      command line for access to either IKS or OpenShift.
                       </p>
                       <br></br>
-                      <CodeSnippet type="multi" {...multilineProps}>
-                      {
-`
-npm i -g @garage-catalyst/ibm-garage-cloud-cli
-ibmcloud login -a cloud.ibm.com -r <region> -g <resource group>
-ibmcloud ks cluster-config --cluster <cluster-name>
-kubectl get nodes
-`}
-                      </CodeSnippet>
-                    </div>
-
-                    <div className="code-snippets">
                       <p>
                       To use the Starter Kit templates, click on the link and generate a template into your own git organization.
                       Then clone it onto your local machine and then use igc to register it with your Jenkins CI server.
-                      <br></br>
                       </p>
+
                       <br></br>
 
                       <CodeSnippet type="multi" {...multilineProps}>
                       {
 `
+ibmcloud login | oc login ! login to you kube cluster
+kubectl get nodes | oc get nodes
+npm i -g @garage-catalyst/ibm-garage-cloud-cli
 git clone <generated startkit template>
 cd <generated startkit template>
-igc register 
-
+code package.json ! rename your project
+igc register
 `}
                       </CodeSnippet>
                     </div>
 
                     <p className="new-line">
-                    Use the following links to generate a repo using the Github template feature. This will help acccelerate the start of your project
+                    Use the following links to generate a repo using the Github template. This will help you to acccelerate the start of your project
                     <br></br>
                     </p>
                     <br></br>
