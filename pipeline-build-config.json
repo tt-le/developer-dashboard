@@ -1,0 +1,1 @@
+{"apiVersion":"v1","kind":"BuildConfig","metadata":{"name":"garage-catalyst.catalyst-dashboard"},"spec":{"source":{"git":{"uri":"https://github.ibm.com/garage-catalyst/catalyst-dashboard.git","ref":"dev"}},"strategy":{"jenkinsPipelineStrategy":{"jenkinsfilePath":"Jenkinsfile","env":[{"name":"CLOUD_NAME","value":"openshift"}]}}}}
