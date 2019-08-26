@@ -211,7 +211,23 @@ render() {
                           alt="illustration"
                         />
                         </ResourceCard>
-                      </div>
+                    </div>
+
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                      <ResourceCard
+                          subTitle="Manage your Source Code"
+                          title="Git Lab"
+                          aspectRatio="2:1"
+                          href={buildUrl('gitlab')}
+                      >
+                        <img
+                            className="resource-img"
+                            src={`${process.env.PUBLIC_URL}/gitlab-logo.png`}
+                            alt="illustration"
+                        />
+                      </ResourceCard>
+                    </div>
+
 
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
