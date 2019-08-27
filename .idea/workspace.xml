@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/sonarqube-scan.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +101,7 @@
       <workItem from="1563895006806" duration="460000" />
       <workItem from="1563895490163" duration="19656000" />
       <workItem from="1564002498369" duration="986000" />
-      <workItem from="1566844336658" duration="4878000" />
+      <workItem from="1566844336658" duration="5777000" />
     </task>
     <servers />
   </component>
