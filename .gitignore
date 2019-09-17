@@ -26,4 +26,5 @@ yarn-error.log*
 
 .nyc_output
 pipeline-build-config.json
-/.idea/
+
+.idea/workspace.xml
