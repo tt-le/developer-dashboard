@@ -1,8 +1,8 @@
 {
   "name": "catalyst-dashboard",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "org": "garagecatalyst",
-  "description": "IBM Garage Catalyst Development Tools Dashboard",
+  "description": "IBM Garage Cloud Development Tools Dashboard",
   "private": true,
   "engines": {
     "node": "^8.11.1"
@@ -37,8 +37,9 @@
     "express": "^4.15.3",
     "ibm-cloud-env": "^0",
     "log4js": "^3.0.5",
-    "tslib": "^1.10.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "request-promise": "^4.2.4",
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/node": "^11.13.19",

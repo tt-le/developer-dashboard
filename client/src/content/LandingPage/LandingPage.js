@@ -62,7 +62,7 @@ export default class LandingPage extends React.Component {
               {componentUrls: data},
             ));
           });
-        fetch(host + "/data/links.json")
+        fetch(host + "/activation/links")
           .then(response => response.json())
           .then(data => {
             console.log(data);
