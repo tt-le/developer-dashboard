@@ -137,12 +137,18 @@ render() {
     return starterkits;
 
   }
-  function buildUrl (val) {
+
+  function buildUrl(val) {
     const host = window.location.hostname;
     const protocol = window.location.protocol || "http:";
 
     return componentUrls[val] || protocol + "//" + host.replace("dashboard", val);
   }
+
+  function isDisabled(val) {
+    return !componentUrls[val];
+  }
+
   const multilineProps = props.multiline();
 
   const { links, isLoading, error, componentUrls = {} } = this.state;
@@ -198,7 +204,7 @@ render() {
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
 
-                  <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
                         subTitle="Edit code with a web IDE"
                         title="Eclipse Che"
@@ -212,7 +218,6 @@ render() {
                         />
                         </ResourceCard>
                     </div>
-
                     <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
                       <ResourceCard
                           subTitle="Manage your Source Code"
@@ -227,14 +232,13 @@ render() {
                         />
                       </ResourceCard>
                     </div>
-
-
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
                         subTitle="Managed your build pipelines"
                         title="Jenkins CI"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
+                        disabled={isDisabled('jenkins')}
                         href={buildUrl('jenkins')}
                         >​
                         <img
@@ -250,6 +254,7 @@ render() {
                         title="Argo CD"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
+                        disabled={isDisabled('argocd')}
                         href={buildUrl('argocd')}
                         >​
                         <img
@@ -265,6 +270,7 @@ render() {
                       title="Artifactory"
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
+                      disabled={isDisabled('artifactory')}
                       href={buildUrl('artifactory')}
                       >​
                     <img
@@ -280,6 +286,7 @@ render() {
                         title="SonarQube"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
+                        disabled={isDisabled('sonarqube')}
                         href={buildUrl('sonarqube')}
                         >                    ​
                         <img
@@ -295,6 +302,7 @@ render() {
                         subTitle="Test your microservice contracts"
                         title="Pact Testing"
                         aspectRatio="2:1"
+                        disabled={isDisabled('pact')}
                         href={buildUrl('pact')}
                         >
                           <img
