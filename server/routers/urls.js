@@ -8,7 +8,7 @@ module.exports = function(app) {
       gitlab: "https://"+(process.env.REGION || 'us-south') + ".git.cloud.ibm.com",
       jenkins: process.env.JENKINS_URL,
       argocd: process.env.ARGOCD_URL,
-      artefactory: process.env.ARTEFACTORY_URL,
+      artifactory: process.env.ARTIFACTORY_URL,
       sonarqube: process.env.SONARQUBE_URL,
       pact: process.env.PACTBROKER_URL,
     });
