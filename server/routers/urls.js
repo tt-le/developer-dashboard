@@ -6,6 +6,7 @@ module.exports = function(app) {
   router.get('/', function (req, res, next) {
     res.json({
       gitlab: "https://"+(process.env.REGION || 'us-south') + ".git.cloud.ibm.com",
+      che: process.env.CHE_URL || "https://che.openshift.io/dashboard/",
       jenkins: process.env.JENKINS_URL,
       argocd: process.env.ARGOCD_URL,
       artifactory: process.env.ARTIFACTORY_URL,

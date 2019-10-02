@@ -65,7 +65,7 @@ export default class LandingPage extends React.Component {
         fetch(host + "/activation/links")
           .then(response => response.json())
           .then(data => {
-            console.log(data);
+            console.log('activation links: ', data);
             this.setState(Object.assign(
               {},
               this.state,
@@ -138,6 +138,12 @@ render() {
 
   }
 
+  const multilineProps = props.multiline();
+
+  const { links, isLoading, error, componentUrls = {} } = this.state;
+
+  //var links= this.state.links ? this.state.links : [] ;
+
   function buildUrl(val) {
     const host = window.location.hostname;
     const protocol = window.location.protocol || "http:";
@@ -145,15 +151,9 @@ render() {
     return componentUrls[val] || protocol + "//" + host.replace("dashboard", val);
   }
 
-  function isDisabled(val) {
-    return !componentUrls[val];
+  function isComponentAvailable(val) {
+    return !!componentUrls[val];
   }
-
-  const multilineProps = props.multiline();
-
-  const { links, isLoading, error, componentUrls = {} } = this.state;
-
-  //var links= this.state.links ? this.state.links : [] ;
 
 
   if (error) {
@@ -209,7 +209,7 @@ render() {
                         subTitle="Edit code with a web IDE"
                         title="Eclipse Che"
                         aspectRatio="2:1"
-                        href="https://che.openshift.io/dashboard/"
+                        href={buildUrl('che')}
                         >
                           <img
                           className="resource-img"
@@ -238,7 +238,7 @@ render() {
                         title="Jenkins CI"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
-                        disabled={isDisabled('jenkins')}
+                        hidden={!isComponentAvailable('jenkins')}
                         href={buildUrl('jenkins')}
                         >​
                         <img
@@ -254,7 +254,7 @@ render() {
                         title="Argo CD"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
-                        disabled={isDisabled('argocd')}
+                        hidden={!isComponentAvailable('argocd')}
                         href={buildUrl('argocd')}
                         >​
                         <img
@@ -270,7 +270,7 @@ render() {
                       title="Artifactory"
                       actionIcon="arrorRight"
                       aspectRatio="2:1"
-                      disabled={isDisabled('artifactory')}
+                      hidden={!isComponentAvailable('artifactory')}
                       href={buildUrl('artifactory')}
                       >​
                     <img
@@ -286,7 +286,7 @@ render() {
                         title="SonarQube"
                         aspectRatio="2:1"
                         actionIcon="arrowRight"
-                        disabled={isDisabled('sonarqube')}
+                        hidden={!isComponentAvailable('sonarqube')}
                         href={buildUrl('sonarqube')}
                         >                    ​
                         <img
@@ -302,7 +302,7 @@ render() {
                         subTitle="Test your microservice contracts"
                         title="Pact Testing"
                         aspectRatio="2:1"
-                        disabled={isDisabled('pact')}
+                        hidden={!isComponentAvailable('pact')}
                         href={buildUrl('pact')}
                         >
                           <img

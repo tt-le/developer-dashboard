@@ -55,6 +55,10 @@
   fill: $carbon--gray-10; //$icon-01 for grsay 90 theme
 }
 
+.#{$prefix}--resource-card--hidden {
+  display: none;
+}
+
 // Disabled
 .#{$prefix}--resource-card--disabled .#{$prefix}--tile:hover {
   background: $ui-background;

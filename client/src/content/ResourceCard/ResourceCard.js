@@ -49,6 +49,11 @@ export default class ResourceCard extends React.Component {
     disabled: PropTypes.bool,
 
     /**
+     * Use to hide card
+     */
+    hidden: PropTypes.bool,
+
+    /**
      * Specify a custom class
      */
     className: PropTypes.string,
@@ -57,6 +62,7 @@ export default class ResourceCard extends React.Component {
   static defaultProps = {
     color: 'light',
     disabled: false,
+    hidden: false,
     aspectRatio: '2:1',
     actionIcon: 'launch',
   };
@@ -69,6 +75,7 @@ export default class ResourceCard extends React.Component {
       title,
       color,
       disabled,
+      hidden,
       aspectRatio,
       actionIcon,
       className,
@@ -82,6 +89,7 @@ export default class ResourceCard extends React.Component {
     const ResourceCardClassNames = classnames([`${prefix}--resource-card`], {
       [className]: className,
       [`${prefix}--resource-card--disabled`]: disabled,
+      [`${prefix}--resource-card--hidden`]: hidden,
       [`${prefix}--resource-card--dark`]: color === 'dark',
     });
 
