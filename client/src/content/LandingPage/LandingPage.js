@@ -49,10 +49,7 @@ export default class LandingPage extends React.Component {
     // Load the Data into the Project
     componentDidMount() {
 
-        var host = "http://"+window.location.hostname+":"+window.location.port;
-        console.log(host);
-
-        fetch(host + "/urls")
+        fetch("/urls")
           .then(response => response.json())
           .then(data => {
             console.log('urls', data);
@@ -62,7 +59,7 @@ export default class LandingPage extends React.Component {
               {componentUrls: data},
             ));
           });
-        fetch(host + "/activation/links")
+        fetch("/activation/links")
           .then(response => response.json())
           .then(data => {
             console.log('activation links: ', data);
