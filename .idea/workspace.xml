@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="Fix Argo CD logo Transparency">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="Fix Argo CD logo Transparency" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <workItem from="1563895490163" duration="19656000" />
       <workItem from="1564002498369" duration="986000" />
       <workItem from="1566844336658" duration="6420000" />
-      <workItem from="1570290549176" duration="702000" />
+      <workItem from="1570290549176" duration="963000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>
