@@ -26,7 +26,6 @@
     {"title":"Cloud Databases", "subtitle":"Managed services for persisting data","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/think/define-data-strategy/","color":"dark"}
   ],
   "gmd":[
-    {"title":"Squad Leadership Guide", "subtitle": "How to run an agile squad","author":"BOX","href":"https://ibm.ent.box.com/notes/310053942022","color":"dark"},
     {"title":"Pair Programming", "subtitle":"Two developers work together on one task","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_pair_programming/","color":"dark"},
     {"title":"Testing Overview", "subtitle":"Automated testing for CI/CD pipelines","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_automated_testing/","color":"dark"},
     {"title":"Performance Testing", "subtitle":"Automated testing for CI/CD pipelines","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/practice_performance_testing/","color":"dark"},
@@ -39,7 +38,6 @@
 
   ],
   "starterkits" : [
-  {"title":"React Core", "subtitle":"A base React template to get you started with UI best practices","language":"React","href":"https://github.ibm.com/bluemix-garage/create-react-app-starter","color":"light"},
   {"title":"React UI Patterns", "subtitle":"Carbon based UI to help with common patterns using React framework","language":"React","href":"https://github.com/ibm-garage-cloud/template-node-react","color":"light"},
   {"title":"Angular UI Patterns", "subtitle":"Carbon based UI to help with common patterns using Angular framework","language":"Angular","href":"https://github.com/ibm-garage-cloud/template-node-angular","color":"light"},
   {"title":"Typescript GraphQL", "subtitle":"Node.js TypeScript GraphQL Backend for Frontend","language":"TypeScript","href":"https://github.com/ibm-garage-cloud/template-graphql-typescript","color":"light"},
@@ -48,8 +46,7 @@
   ],
   "argocd" : [
     {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},
-    {"title":"IBM Cloud Services", "subtitle":"Code Snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"},
-    {"title":"Garage Assets", "subtitle":"Other Garage Code assets, some of these are not enabled for Catalyst","language":"Various","href":"https://ibm.ent.box.com/notes/317998900286","color":"grey"}
+    {"title":"IBM Cloud Services", "subtitle":"Code Snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"}
 
   ]
 }

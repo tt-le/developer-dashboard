@@ -7,7 +7,7 @@ module.exports = function(app) {
 
   router.get('/links', function (req, res, next) {
 
-    var activation = "https://raw.githubusercontent.com/ibm-garage-cloud/catalyst-dashboard/master/public/data/links.json"
+    var activation =  process.env.LINKS_URL || "https://raw.githubusercontent.com/ibm-garage-cloud/catalyst-dashboard/master/public/data/links.json";
 
     // Get the Activation links
     rp({
