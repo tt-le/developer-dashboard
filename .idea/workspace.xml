@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/data/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/links.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1570290549176" duration="963000" />
       <workItem from="1570636797118" duration="1778000" />
       <workItem from="1570729733830" duration="17000" />
-      <workItem from="1570733057941" duration="3408000" />
+      <workItem from="1570733057941" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>
