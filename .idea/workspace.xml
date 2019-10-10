@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="" />
+    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +44,16 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../template-node-react/package.json" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/server/routers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/server/routers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/server/routers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,7 +118,7 @@
       <workItem from="1570290549176" duration="963000" />
       <workItem from="1570636797118" duration="1778000" />
       <workItem from="1570729733830" duration="17000" />
-      <workItem from="1570733057941" duration="4101000" />
+      <workItem from="1570733057941" duration="4414000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>
