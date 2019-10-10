@@ -167,12 +167,16 @@ render() {
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="https://w3.ibm.com/w3publisher/ibm-cloud-garage-catalyst">Catalyst Info</a>
+              <a href="https://w3.ibm.com/w3publisher/ibm-cloud-garage-catalyst">Project Info</a>
             </BreadcrumbItem>
           </Breadcrumb>
           <h1 className="landing-page__heading">
             Development Cluster Dashboard
           </h1>
+          <div hidden={!isComponentAvailable('tekton')}>
+            Supports&nbsp;
+            <img src={`${process.env.PUBLIC_URL}/kabanero.png` } alt="logo" width="125px"></img>
+          </div>
         </div>
       </div>
       <div className="bx--row landing-page__r2">
@@ -229,6 +233,46 @@ render() {
                         />
                       </ResourceCard>
                     </div>
+
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                      <ResourceCard
+                          subTitle="Manage piplines with Kabanero Enterprise Tekton"
+                          title="Tekton"
+                          aspectRatio="2:1"
+                          actionIcon="arrowRight"
+                          hidden={!isComponentAvailable('tekton')}
+                          href={buildUrl('tekton')}
+                      >
+                        <img
+                            className="resource-img"
+                            src={`${process.env.PUBLIC_URL}/tekton.png`}
+                            alt="illustration"
+                        />
+                      </ResourceCard>
+                    </div>
+
+                    <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                      <ResourceCard
+                          subTitle="Help modernize you JEE apps with Transformation Advisor"
+                          title="Transformation Advisor"
+                          aspectRatio="2:1"
+                          actionIcon="arrowRight"
+                          hidden={!isComponentAvailable('ta')}
+                          href={buildUrl('ta')}
+                      >
+                        <img
+                            className="resource-img"
+                            src={`${process.env.PUBLIC_URL}/ta.svg`}
+                            alt="illustration"
+                        />
+                      </ResourceCard>
+                    </div>
+
+
+
+
+
+
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
                         subTitle="Managed your build pipelines"
@@ -369,14 +413,14 @@ render() {
 
                     <div>
                       <p>
-                      Follow the commands below to install the IBM Garage Catalyst CLI tools, this has been designed
+                      Follow the commands below to install the IBM Garage for Cloud CLI tools. This has been designed
                       to help you work with your project code. Login to the IBM Cloud account and configure your
-                      command line for access to either IKS or OpenShift.
+                      command line for access to either IBM Kubernetes Service or Red Hat OpenShift.
                       </p>
                       <br></br>
                       <p>
                       To use the Starter Kit templates, click on the link and generate a template into your own git organization.
-                      Then clone it onto your local machine and then use igc to register it with your Jenkins CI server.
+                      Then clone it onto your local machine and then use igc pipeline to register it with your Jenkins server.
                       </p>
 
                       <br></br>
@@ -390,13 +434,13 @@ npm i -g @garage-catalyst/ibm-garage-cloud-cli
 git clone <generated startkit template>
 cd <generated startkit template>
 code package.json ! rename your project
-igc register
+igc pipeline
 `}
                       </CodeSnippet>
                     </div>
 
                     <p className="new-line">
-                    Use the following links to generate a repo using the Github template. This will help you to acccelerate the start of your project
+                    Use the following templates to generate your own git repos. This will help you to accelerate the start of your project
                     <br></br>
                     </p>
                     <br></br>

@@ -76,7 +76,7 @@
     "prettier": "^1.17.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
