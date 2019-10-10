@@ -45,8 +45,8 @@
   {"title":"Spring Boot Microservice", "subtitle":"Spring Boot Java Microservices","language":"Java","href":"https://github.com/ibm-garage-cloud/template-java-spring","color":"light"}
   ],
   "argocd" : [
-    {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup you CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},
-    {"title":"IBM Cloud Services", "subtitle":"Code Snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"}
+    {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup your CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},
+    {"title":"IBM Cloud Services", "subtitle":"Code snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"}
 
   ]
 }

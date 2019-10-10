@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="Fix Argo CD logo Transparency">
+    <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/data/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/links.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/activation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/activation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routers/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/urls.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +86,7 @@
         <env name="SONARQUBE_URL" value="dummy" />
         <env name="PACTBROKER_URL" value="dummy" />
         <env name="TEKTON_URL" value="dummy" />
-        <env name="TRANADV_URL" value="dummy" />
+        <env name="TA_URL" value="dummy" />
         <env name="LINKS_URL" value="http://localhost:3000/data/links.json" />
       </envs>
       <method v="2" />
@@ -122,6 +121,7 @@
       <workItem from="1570290549176" duration="963000" />
       <workItem from="1570636797118" duration="1778000" />
       <workItem from="1570729733830" duration="17000" />
+      <workItem from="1570733057941" duration="3408000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>
@@ -130,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570290758388</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix Argo CD logo Transparency">
+      <created>1570733082385</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570733082385</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Fix Argo CD logo Transparency" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix Argo CD logo Transparency" />
   </component>

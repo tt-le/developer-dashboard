@@ -1,22 +1,29 @@
-# IBM Garage for Cloud Developer Tools Dashboard
+# IBM Garage for Cloud 
+## Developer Tools Dashboard
 
-A simple dashboard that enable navigation to the tools have have been installed using the `iteration-zero` Terraform asset.
+A simple dashboard that enables navigation to the tools have have been installed using the `iteration-zero` Terraform asset.
 
 ## Build
 
 To build the project use the following commands.
 
+Build and develop with the server code it will open on port `3000`
 ```bash
 npm install
 npm run build
 npm run start
+```
 
+Build and develop with the client code it will open on port `3001`
+```bash
 cd client
 npm run dev 
 
 ```
 
 ### Release steps
+
+The following steps enable you to release a new version of the Dashboard into Docker hub so it can be installed using Terraform.
 
 #### Step 1 
 

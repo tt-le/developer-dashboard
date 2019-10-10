@@ -12,6 +12,8 @@ module.exports = function(app) {
       artifactory: process.env.ARTIFACTORY_URL,
       sonarqube: process.env.SONARQUBE_URL,
       pact: process.env.PACTBROKER_URL,
+      tekton: process.env.TEKTON_URL,
+      ta: process.env.TA_URL
 
     });
   });
