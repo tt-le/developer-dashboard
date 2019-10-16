@@ -11,9 +11,7 @@ module.exports = function(app) {
     const qs = {labelSelector: 'group=catalyst-tools'};
     client.api.v1.namespace(process.env.NAMESPACE || 'tools').configmaps.get({qs})
       .then(result => {
-        const values = _.assign({}, process.env, ...(_.get(result, 'body.items', []).map(configmap => configmap.data)));
-        console.log('Loaded values from ConfigMaps: ', values);
-        return values;
+        return _.assign({}, process.env, ...(_.get(result, 'body.items', []).map(configmap => configmap.data)));
       }, error => {
         console.error('Error reading config maps: ', error);
         return process.env;
