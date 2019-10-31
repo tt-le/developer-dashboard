@@ -33,7 +33,7 @@
     {"title":"TDD Tutorial", "subtitle":"Write the tests before you write the code","author":"Link","href":"https://www.ibm.com/cloud/garage/tutorials/introduction-to-test-driven-development","color":"dark"},
     {"title":"User Interface Design", "subtitle":"Creating an application's dashboard","author":"PDF","href":"https://github.ibm.com/garage-catalyst/training-manual-instructor/blob/master/material/UIDesign/ui-design.pdf","color":"dark"},
     {"title":"JavaScript/TypeScript", "subtitle":"Develop with Node.js","author":"PDF","href":"https://github.ibm.com/garage-catalyst/training-manual-instructor/blob/master/material/Typescript/typescript.pdf","color":"dark"},
-    {"title":"Angular", "subtitle":"Develop dynamic web apps","author":"Link","href":"https://www.ibm.com/cloud/garage/practices/code/tool_angular_js/","color":"dark"},
+    {"title":"Angular", "subtitle":"Develop dynamic web apps","author":"Link","href":"https://angular.io/tutorial","color":"dark"},
     {"title":"React", "subtitle":"Develop dynamic web apps","author":"Link","href":"https://developer.ibm.com/articles/dissecting-react-native/","color":"dark"}
 
   ],
