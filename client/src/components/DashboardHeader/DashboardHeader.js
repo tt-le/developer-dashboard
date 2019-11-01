@@ -17,27 +17,26 @@ const DashboardHeader = () => (
   <Header aria-label="Tools Dashboard">
     <SkipToContent />
     <HeaderName element={Link} to="/" prefix="IBM">
-      Garage - Catalyst Tools
+      Garage for Cloud - Developer Tools
     </HeaderName>
     <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem href="https://cloud.ibm.com/" target="_blank">
         IBM Cloud Console
       </HeaderMenuItem>
     </HeaderNavigation>
+    <HeaderNavigation aria-label="Developer Guide">
+        <HeaderMenuItem href="https://ibm-garage-cloud.github.io/ibm-garage-developer-guide/" target="_blank">
+        Developer Guide
+        </HeaderMenuItem>
+    </HeaderNavigation>
     <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem href="https://github.com/ibm-garage-cloud" target="_blank">
-          Repositories
+          Git Repositories
       </HeaderMenuItem>
     </HeaderNavigation>
     <HeaderGlobalBar>
-      <HeaderGlobalAction aria-label="Notifications">
-        <Notification20 />
-      </HeaderGlobalAction>
       <HeaderGlobalAction aria-label="User Avatar">
         <UserAvatar20 />
-      </HeaderGlobalAction>
-      <HeaderGlobalAction aria-label="App Switcher">
-        <AppSwitcher20 />
       </HeaderGlobalAction>
     </HeaderGlobalBar>
   </Header>

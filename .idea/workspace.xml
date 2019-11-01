@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/data/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/links.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +124,7 @@
       <workItem from="1570636797118" duration="1778000" />
       <workItem from="1570729733830" duration="17000" />
       <workItem from="1570733057941" duration="4414000" />
+      <workItem from="1572620155918" duration="1498000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>

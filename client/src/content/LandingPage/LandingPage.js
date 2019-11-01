@@ -199,8 +199,6 @@ render() {
                       alt="illustration"
                     />
                     <p></p>
-                    <br></br>
-                    <Button>Learn more...</Button>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <div className="bx--row resource-card-group">
@@ -472,8 +470,7 @@ igc pipeline
         <div className="bx--col-md-4 bx--col-lg-4">
           <h3 className="landing-page__label">IBM Garage Links</h3>
         </div>
-        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://github.ibm.com/garage-catalyst/planning" rel="noopener noreferrer" target="_blank">Planning</a></div>
-        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://github.ibm.com/garage-catalyst/planning/blob/master/docs/governance.md" rel="noopener noreferrer" target="_blank">Contribution</a></div>
+        <div className="bx--col-md-4 bx--col-lg-4"><a href="https://ibm-garage-cloud.github.io/ibm-garage-developer-guide/contributing" rel="noopener noreferrer" target="_blank">Contribution</a></div>
         <div className="bx--col-md-4 bx--col-lg-4"><a href="https://www.ibm.com/cloud/garage/practices/overview" rel="noopener noreferrer" target="_blank">Garage Method</a></div>
       </div>
     </div>

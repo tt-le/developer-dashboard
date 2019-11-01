@@ -46,6 +46,7 @@
   ],
   "argocd" : [
     {"title":"Argo CD Test", "subtitle":"ArgoCD Test Template to help setup your CD pipeline","language":"YAML","href":"https://github.com/ibm-garage-cloud/template-argocd-test","color":"grey"},
+    {"title":"Tekton Tasks", "subtitle":"Tekton common Tasks that can be used with Tekton CI tool","language":"YAML","href":"https://github.com/ibm-garage-cloud/ibm-garage-tekton-tasks","color":"grey"},
     {"title":"IBM Cloud Services", "subtitle":"Code snippets to help with the integration of IBM Cloud Services","language":"Java/Typescript","href":"https://github.com/ibm-garage-cloud/template-ibmcloud-services","color":"grey"}
 
   ]
