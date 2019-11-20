@@ -21,12 +21,13 @@ module.exports = function(app) {
           gitlab: "https://"+(env.REGION || 'us-south') + ".git.cloud.ibm.com",
           che: env.CHE_URL || "https://che.openshift.io/dashboard/",
           jenkins: env.JENKINS_URL,
+          pipeline: env.PIPELINE_URL,
           argocd: env.ARGOCD_URL,
           artifactory: env.ARTIFACTORY_URL,
           sonarqube: env.SONARQUBE_URL,
           pact: env.PACTBROKER_URL,
-          tekton: env.TEKTON_URL,
-          ta: env.TA_URL,
+          tekton: env.TEKTON_URL || 'tekton',
+          ta: env.TA_URL || 'ta',
         });
 
       });

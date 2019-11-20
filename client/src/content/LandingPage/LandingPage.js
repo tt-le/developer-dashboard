@@ -41,7 +41,9 @@ export default class LandingPage extends React.Component {
         super(props);
 
         this.state = {
-            links: []
+          links: [],
+          componentUrls: [],
+          cluster: {},
         };
     }
 
@@ -49,24 +51,34 @@ export default class LandingPage extends React.Component {
     // Load the Data into the Project
     componentDidMount() {
 
-        fetch("/urls")
-          .then(response => response.json())
-          .then(data => {
-            console.log('urls', data);
-            this.setState(Object.assign(
-              {},
-              this.state,
-              {componentUrls: data},
-            ));
-          });
-        fetch("/activation/links")
+      fetch("/urls")
+        .then(response => response.json())
+        .then(data => {
+          console.log('urls', data);
+          this.setState(Object.assign(
+            {},
+            this.state,
+            {componentUrls: data},
+          ));
+        });
+      fetch("/activation/links")
           .then(response => response.json())
           .then(data => {
             console.log('activation links: ', data);
             this.setState(Object.assign(
-              {},
-              this.state,
-              {links: data},
+                {},
+                this.state,
+                {links: data},
+            ));
+          });
+      fetch("/cluster")
+          .then(response => response.json())
+          .then(data => {
+            console.log('cluster info: ', data);
+            this.setState(Object.assign(
+                {},
+                this.state,
+                {cluster: data},
             ));
           });
     }
@@ -78,7 +90,7 @@ render() {
     if (_.isUndefined(data))
       return [];
 
-    let articles = []
+    let articles = [];
 
     // Outer loop to create parent
     data.forEach(function(article,index){
@@ -181,7 +193,7 @@ render() {
       </div>
       <div className="bx--row landing-page__r2">
         <div className="bx--col bx--no-gutter">
-          <Tabs {...props.tabs} aria-label="Tab navigation">
+          <Tabs className="top" {...props.tabs} aria-label="Tab navigation">
             <Tab {...props.tab} label="Dashboard">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
@@ -201,6 +213,15 @@ render() {
                     <p></p>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
+                      <div style={{"background-color": "#000", color: "#fff", padding: "10px 10px", "display": this.state.cluster.CLUSTER_TYPE ? "block" : "none", "margin-bottom": "10px"}}>
+                        <ul style={{"padding": "5px 10px"}}>
+                          <li style={{"padding": "5px 0"}}><strong>CLUSTER_TYPE:</strong> {this.state.cluster.CLUSTER_TYPE}</li>
+                          <li style={{"padding": "5px 0"}}>WEB_CONSOLE: <a style={{color: "#fff"}} href={this.state.cluster.SERVER_URL + "/console"}>{this.state.cluster.SERVER_URL}/console</a></li>
+                          <li style={{"padding": "5px 0"}}>REGION: {this.state.cluster.REGION}</li>
+                          <li style={{"padding": "5px 0"}}>RESOURCE_GROUP: {this.state.cluster.RESOURCE_GROUP}</li>
+                          <li style={{"padding": "5px 0"}}>IMAGE_REGISTRY: {this.state.cluster.REGISTRY_URL + "/" + this.state.cluster.REGISTRY_NAMESPACE}</li>
+                        </ul>
+                      </div>
                   <div className="bx--row resource-card-group">
 
                     <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
@@ -273,17 +294,31 @@ render() {
 
                     <div className="bx--column bx--col-md-4 bx--no-gutter-sm">
                       <ResourceCard
-                        subTitle="Managed your build pipelines"
-                        title="Jenkins CI"
-                        aspectRatio="2:1"
-                        actionIcon="arrowRight"
-                        hidden={!isComponentAvailable('jenkins')}
-                        href={buildUrl('jenkins')}
-                        >​
+                          subTitle="Managed your build pipelines"
+                          title="Jenkins CI"
+                          aspectRatio="2:1"
+                          actionIcon="arrowRight"
+                          hidden={!isComponentAvailable('jenkins')}
+                          href={buildUrl('jenkins')}
+                      >​
                         <img
-                          className="resource-img"
-                          src={`${process.env.PUBLIC_URL}/jenkins.png`}
-                          alt="Jenkins CD"
+                            className="resource-img"
+                            src={`${process.env.PUBLIC_URL}/jenkins.png`}
+                            alt="Jenkins CI"
+                        />​
+                      </ResourceCard>
+                      <ResourceCard
+                          subTitle="Managed your build pipelines"
+                          title="OpenShift pipeline"
+                          aspectRatio="2:1"
+                          actionIcon="arrowRight"
+                          hidden={!isComponentAvailable('pipeline')}
+                          href={buildUrl('pipeline')}
+                      >​
+                        <img
+                            className="resource-img"
+                            src={`${process.env.PUBLIC_URL}/openshift.png`}
+                            alt="Openshift CI"
                         />​
                       </ResourceCard>
                     </div>
@@ -423,16 +458,26 @@ render() {
 
                       <br></br>
 
-                      <CodeSnippet type="multi" {...multilineProps}>
+                      <CodeSnippet type="multi" {...multilineProps} style={{display: this.state.cluster.CLUSTER_TYPE === "kubernetes" ? "block" : "none"}}>
                       {
 `
-ibmcloud login | oc login ! login to you kube cluster
-kubectl get nodes | oc get nodes
+ibmcloud login -r ${this.state.cluster.REGION} -g ${this.state.cluster.RESOURCE_GROUP}
+kubectl get pods
 npm i -g @garage-catalyst/ibm-garage-cloud-cli
 git clone <generated startkit template>
 cd <generated startkit template>
-code package.json ! rename your project
-igc pipeline
+igc pipeline -n <namespace>
+`}
+                      </CodeSnippet>
+                      <CodeSnippet type="multi" {...multilineProps} style={{display: this.state.cluster.CLUSTER_TYPE === "openshift" ? "block" : "none"}}>
+                        {
+                          `
+oc login
+oc get pods
+npm i -g @garage-catalyst/ibm-garage-cloud-cli
+git clone <generated startkit template>
+cd <generated startkit template>
+igc pipeline -n <namespace>
 `}
                       </CodeSnippet>
                     </div>
