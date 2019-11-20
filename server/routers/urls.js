@@ -1,12 +1,12 @@
 var express = require('express');
-const {Client} = require('kubernetes-client');
 const _ = require('lodash');
+const kubernetesClient = require('./kubernetes-client');
 
 module.exports = function(app) {
   var router = express.Router();
 
   router.get('/', function (req, res, next) {
-    const client = new Client({version: '1.13'});
+    const client = kubernetesClient();
 
     const qs = {labelSelector: 'group=catalyst-tools'};
     client.api.v1.namespace(process.env.NAMESPACE || 'tools').configmaps.get({qs})
