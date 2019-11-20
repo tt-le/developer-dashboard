@@ -26,8 +26,8 @@ module.exports = function(app) {
           artifactory: env.ARTIFACTORY_URL,
           sonarqube: env.SONARQUBE_URL,
           pact: env.PACTBROKER_URL,
-          tekton: env.TEKTON_URL || 'tekton',
-          ta: env.TA_URL || 'ta',
+          tekton: env.TEKTON_URL,
+          ta: env.TA_URL,
         });
 
       });
