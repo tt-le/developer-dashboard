@@ -6,7 +6,9 @@ module.exports = function(app) {
   var router = express.Router();
 
   router.get('/', function (req, res, next) {
+
     try {
+
       const client = kubernetesClient();
 
       const qs = {labelSelector: 'group=catalyst-tools'};

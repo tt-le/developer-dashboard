@@ -6,5 +6,7 @@ module.exports = function() {
   kubeconfig.loadFromCluster();
   const backend = new Request({kubeconfig});
 
-  return new Client({backend, version: '1.13'});
+  //return new Client({backend, version: '1.13'});
+
+  return new Client({ version: '1.13'});
 };
