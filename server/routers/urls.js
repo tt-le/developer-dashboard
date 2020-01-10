@@ -29,6 +29,7 @@ module.exports = function(app) {
               pact: env.PACTBROKER_URL,
               tekton: env.TEKTON_URL,
               ta: env.TA_URL,
+              swagger: env.SWAGGER_URL
             });
           });
     } catch (err) {

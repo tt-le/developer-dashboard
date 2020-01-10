@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/catalyst-tools-dashboard.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/data/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/links.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/catalyst-tools-dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routers/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/urls.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,24 +29,30 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.nvm/versions/node/v12.13.1/bin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v12.13.1/bin/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../template-node-react/package.json" />
   </component>
   <component name="RecentsManager">
@@ -61,26 +68,15 @@
       <recent name="$PROJECT_DIR$/server/routers" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.dev server">
+    <configuration name="dev server" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v12.13.1/bin/node" />
+      <package-manager value="npm" />
       <envs>
         <env name="JENKINS_URL" value="dummy" />
         <env name="ARGOCD_URL" value="dummy" />
@@ -90,23 +86,38 @@
         <env name="TEKTON_URL" value="dummy" />
         <env name="TA_URL" value="dummy" />
         <env name="LINKS_URL" value="http://localhost:3000/data/links.json" />
+        <env name="SWAGGER_URL" value="dummy" />
+        <env name="TITLE" value="IBM GSI Ecosystem - Developer Tools" />
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.start" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.dev server" />
     </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -125,6 +136,8 @@
       <workItem from="1570729733830" duration="17000" />
       <workItem from="1570733057941" duration="4414000" />
       <workItem from="1572620155918" duration="1498000" />
+      <workItem from="1576990459284" duration="221000" />
+      <workItem from="1578619679147" duration="2292000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Argo CD logo Transparency">
       <created>1570290758388</created>
@@ -178,10 +191,47 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Fix Argo CD logo Transparency" />
     <MESSAGE value="Update version number" />
     <option name="LAST_COMMIT_MESSAGE" value="Update version number" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="562" y="269" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578621974199">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="562" y="269" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578621974199" />
+    <state x="557" y="261" key="EnvironmentVariablesDialog" timestamp="1578621969386">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="557" y="261" key="EnvironmentVariablesDialog/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578621969386" />
+    <state x="835" y="319" key="FileChooserDialogImpl" timestamp="1578620917399">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="835" y="319" key="FileChooserDialogImpl/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578620917399" />
+    <state width="1426" height="442" key="GridCell.Tab.0.bottom" timestamp="1578622016538">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1426" height="442" key="GridCell.Tab.0.bottom/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578622016538" />
+    <state width="1426" height="442" key="GridCell.Tab.0.center" timestamp="1578622016537">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1426" height="442" key="GridCell.Tab.0.center/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578622016537" />
+    <state width="1426" height="442" key="GridCell.Tab.0.left" timestamp="1578622016536">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1426" height="442" key="GridCell.Tab.0.left/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578622016536" />
+    <state width="1426" height="442" key="GridCell.Tab.0.right" timestamp="1578622016537">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1426" height="442" key="GridCell.Tab.0.right/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578622016537" />
+    <state x="156" y="68" key="SettingsEditor" timestamp="1578621665466">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="156" y="68" key="SettingsEditor/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578621665466" />
+    <state x="753" y="384" key="jetbrains.nodejs.interpreters-dialog" timestamp="1578620934318">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="753" y="384" key="jetbrains.nodejs.interpreters-dialog/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578620934318" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

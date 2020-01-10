@@ -1,7 +1,7 @@
 {
   "name": "catalyst-dashboard",
   "version": "1.0.19",
-  "org": "garagecatalyst",
+  "org": "IBM Garage",
   "description": "IBM Garage Cloud Development Tools Dashboard",
   "private": true,
   "engines": {

@@ -179,16 +179,12 @@ render() {
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="https://w3.ibm.com/w3publisher/ibm-cloud-garage-catalyst">Project Info</a>
+              <a href="https://github.com/ibm-garage-cloud/planning/issues">Project Info</a>
             </BreadcrumbItem>
           </Breadcrumb>
           <h1 className="landing-page__heading">
             Development Cluster Dashboard
           </h1>
-          <div hidden={!isComponentAvailable('tekton')}>
-            Supports&nbsp;
-            <img src={`${process.env.PUBLIC_URL}/kabanero.png` } alt="logo" width="125px"></img>
-          </div>
         </div>
       </div>
       <div className="bx--row landing-page__r2">
