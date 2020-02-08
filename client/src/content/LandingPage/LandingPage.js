@@ -179,7 +179,7 @@ render() {
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="https://github.com/ibm-garage-cloud/planning/issues">Project Info</a>
+              <a href="https://github.com/ibm-garage-cloud/">Project Info</a>
             </BreadcrumbItem>
           </Breadcrumb>
           <h1 className="landing-page__heading">
@@ -203,7 +203,7 @@ render() {
                     </p>
                     <img
                       className="landing-page__illo"
-                      src={`${process.env.PUBLIC_URL}/catalyst-tools-dashboard.svg`}
+                      src={`${process.env.PUBLIC_URL}/dashboard.svg`}
                       alt="illustration"
                     />
                     <p></p>
