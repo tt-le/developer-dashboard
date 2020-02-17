@@ -1,7 +1,7 @@
 import React from 'react';
 import ResourceCard from '../ResourceCard';
 import ArticleCard from '../ArticleCard';
-import StarterKitCard from '../StarterKitCard';
+import CodePatternCard from '../CodePatternCard';
 import _ from 'lodash';
 
 import {
@@ -12,6 +12,7 @@ import {
   Tab,
   CodeSnippet
 } from 'carbon-components-react';
+import CodePatternCard from "../CodePatternCard";
 
 const props = {
   tabs: {
@@ -118,27 +119,27 @@ render() {
 
   }
 
-  function getStarterKits(data) {
+  function getCodePatterns(data) {
 
     if (_.isUndefined(data))
       return [];
 
-    let starterkits = []
+    let codepatterns = []
 
     // Outer loop to create parent
-    data.forEach(function(starterkit,index){
+    data.forEach(function(codepatterns,index){
       //Create the parent and add the children
-      starterkits.push(
+      codepatterns.push(
         <div className="bx--no-gutter-md--left bx--col-lg-4 bx--col-md-4">
-            <StarterKitCard
-              title={starterkit.title}
-              subTitle={starterkit.subtitle}
-              language={starterkit.language}
-              href={starterkit.href}
-              color={starterkit.color}
-              actionIcon="launch"
-              >
-          </StarterKitCard>
+            <CodePatternCard
+                title={codepatterns.title}
+                subTitle={codepatterns.subtitle}
+                language={codepatterns.language}
+                href={codepatterns.href}
+                color={codepatterns.color}
+                actionIcon="launch"
+            >
+          </CodePatternCard>
         </div>
       );
     });
@@ -431,25 +432,25 @@ render() {
                 </div>
               </div>
             </Tab>
-            <Tab {...props.tab} label="Starter Kits">
+            <Tab {...props.tab} label="Code Patterns">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-16">
 
                     <h2 className="landing-page__subheading">
-                        Starter Kit Templates
+                        Code Patterns Git Repositories
                     </h2>
 
                     <div>
                       <p>
-                      Follow the commands below to install the IBM Garage for Cloud CLI tools. This has been designed
+                      Follow the commands below to install the Cloud Native Toolkit CLI tools. This has been designed
                       to help you work with your project code. Login to the IBM Cloud account and configure your
                       command line for access to either IBM Kubernetes Service or Red Hat OpenShift.
                       </p>
                       <br></br>
                       <p>
-                      To use the Starter Kit templates, click on the link and generate a template into your own git organization.
-                      Then clone it onto your local machine and then use igc pipeline to register it with your Jenkins server.
+                      To use the Code Pattern Code Repositories, click on the link and generate a template into your own git organization.
+                      Then clone it onto your local machine and then use igc pipeline to register it with your Continuous Integration Server.
                       </p>
 
                       <br></br>
@@ -459,10 +460,10 @@ render() {
 `
 ibmcloud login -r ${this.state.cluster.REGION} -g ${this.state.cluster.RESOURCE_GROUP}
 kubectl get pods
-npm i -g @garage-catalyst/ibm-garage-cloud-cli
-git clone <generated startkit template>
-cd <generated startkit template>
-igc pipeline -n <namespace>
+npm i -g @garage-cloud/ibm-garage-cloud-cli
+git clone <code pattern>
+cd <code pattern>
+igc pipeline -n <namespace> | --tekton
 `}
                       </CodeSnippet>
                       <CodeSnippet type="multi" {...multilineProps} style={{display: this.state.cluster.CLUSTER_TYPE === "openshift" ? "block" : "none"}}>
@@ -470,16 +471,16 @@ igc pipeline -n <namespace>
                           `
 oc login
 oc get pods
-npm i -g @garage-catalyst/ibm-garage-cloud-cli
-git clone <generated startkit template>
-cd <generated startkit template>
-igc pipeline -n <namespace>
+npm i -g @garage-cloud/ibm-garage-cloud-cli
+git clone <code pattern>
+cd <code pattern>
+igc pipeline -n <namespace> | --tekton
 `}
                       </CodeSnippet>
                     </div>
 
                     <p className="new-line">
-                    Use the following templates to generate your own git repos. This will help you to accelerate the start of your project
+                    Use the following code patterns to create your own git repos. This will help you to accelerate the start of your project
                     <br></br>
                     </p>
                     <br></br>

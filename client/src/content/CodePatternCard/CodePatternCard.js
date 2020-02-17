@@ -10,7 +10,7 @@ import { settings } from 'carbon-components';
 
 const { prefix } = settings;
 
-export default class StarterKitCard extends React.Component {
+export default class CodePatternCard extends React.Component {
   static propTypes = {
     children: PropTypes.node,
 
