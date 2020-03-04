@@ -1,18 +1,18 @@
 var express = require('express');
 const _ = require('lodash');
 const kubernetesClient = require('./kubernetes-client');
-var fs = require("fs");
+const fs = require("fs");
+const clusterInfo = require("../config/ibmcloud-config.json");
 
 module.exports = function (app) {
+
     var router = express.Router();
 
     router.get('/', function (req, res, next) {
 
         // Check if we are running locally
         if (process.env.npm_lifecycle_event === "dev") {
-            var ibm_cloud_configMap = JSON.parse(fs.readFileSync('./config/ibmcloud-config.json', 'utf8'));
-            res.json(ibm_cloud_configMap);
-
+            res.json(clusterInfo);
         } else {
             try {
                 const client = kubernetesClient();
@@ -33,8 +33,8 @@ module.exports = function (app) {
             }
         }
 
-        // Define API to retrieve Cluster information
-        app.use("/cluster", router);
+    });
 
-    })
+    // Define API to retrieve Cluster information
+    app.use("/cluster", router);
 }

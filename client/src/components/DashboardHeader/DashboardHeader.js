@@ -17,7 +17,7 @@ const DashboardHeader = () => (
   <Header aria-label="Tools Dashboard">
     <SkipToContent />
     <HeaderName element={Link} to="/" prefix="IBM">
-      Garage for Cloud - Developer Tools
+      Garage - Cloud-Native Toolkit
     </HeaderName>
     <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem href="https://cloud.ibm.com/" target="_blank">
@@ -29,11 +29,17 @@ const DashboardHeader = () => (
         Developer Guide
         </HeaderMenuItem>
     </HeaderNavigation>
-    <HeaderNavigation aria-label="Repositories">
-      <HeaderMenuItem href="https://github.com/ibm-garage-cloud" target="_blank">
-          Git Repositories
-      </HeaderMenuItem>
+
+    <HeaderNavigation aria-label="Code Pattern Repos">
+          <HeaderMenuItem href="https://github.com/orgs/IBM/teams/ibm-garage-cloud/repositories" target="_blank">
+              Code Pattern Repository
+          </HeaderMenuItem>
     </HeaderNavigation>
+      <HeaderNavigation aria-label="Repositories">
+          <HeaderMenuItem href="https://github.com/ibm-garage-cloud" target="_blank">
+              Git Org
+          </HeaderMenuItem>
+      </HeaderNavigation>
     <HeaderGlobalBar>
       <HeaderGlobalAction aria-label="User Avatar">
         <UserAvatar20 />

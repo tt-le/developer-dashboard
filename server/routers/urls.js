@@ -16,10 +16,14 @@ module.exports = function (app) {
                     argocd: env.ARGOCD_URL,
                     artifactory: env.ARTIFACTORY_URL,
                     sonarqube: env.SONARQUBE_URL,
-                    pact: env.PACTBROKER_URL,
+                    pact: env.PACT_URL,
                     tekton: env.TEKTON_URL,
                     ta: env.TA_URL,
-                    swagger: env.SWAGGER_URL
+                    apieditor: env.APIEDITOR_URL,
+                    codeready:env.CODEREADY_URL,
+                    github:env.GITHUB_URL,
+                    integration:env.INTEGRATION_URL,
+                    mcm: env.MCM_URL
                 });
             }
 

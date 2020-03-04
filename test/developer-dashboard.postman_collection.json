@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "46f93743-11fa-48ef-86f8-ae640ea596fb",
+		"name": "Catalyst",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cluster",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cluster",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cluster",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "URLs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/urls",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/health",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/activation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"activation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

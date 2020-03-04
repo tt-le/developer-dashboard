@@ -7,7 +7,7 @@ $feature-flags: (
 @import 'content/ResourceCard/resource-card.scss';
 @import 'content/ResourceCard/resource-card-group.scss';
 @import 'content/ArticleCard/article-card.scss';
-@import 'src/content/CodePatternCard/starterkit-card.scss';
+@import 'src/content/CodePatternCard/codepattern-card.scss';
 
 // Remove overrides once Carbon bugs are fixed upstream.
 
@@ -97,3 +97,7 @@ main {
     margin-right: 33%;
   }
 }
+
+
+
+

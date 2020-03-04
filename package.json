@@ -1,6 +1,6 @@
 {
-  "name": "catalyst-dashboard",
-  "version": "1.0.19",
+  "name": "developer-dashboard",
+  "version": "1.0.20",
   "org": "IBM Garage",
   "description": "IBM Garage Cloud Development Tools Dashboard",
   "private": true,
@@ -12,6 +12,7 @@
     "start": "node server/server.js",
     "debug": "chmod +x run-debug && ./run-debug",
     "test": "nyc mocha --exit",
+    "api:test" : "newman run test/developer-dashboard.postman_collection.json",
     "dev": "nodemon server/server.js",
     "build": "cd client && npm run build",
     "build:image": "./scripts/build.sh $npm_package_name $npm_package_version",
@@ -32,6 +33,8 @@
     }
   },
   "dependencies": {
+    "@carbon/colors": "^10.7.2",
+    "@carbon/grid": "^10.8.3",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
