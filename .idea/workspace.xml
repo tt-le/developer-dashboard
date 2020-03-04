@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804dbecd-16e1-4af5-aafa-c58c35eca3de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/codeready-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gitlab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mcm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mcm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/swagger-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routers/tools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/developer-dashboard.postman_collection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DashboardHeader/DashboardHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/content/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/LandingPage/_landing-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/content/LandingPage/_landing-page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/RepoPage/RepoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/RepoPage/RepoPage.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/RepoPage/RepoTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/RepoPage/RepoTable.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/RepoPage/_repo-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/RepoPage/_repo-page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/content/RepoPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/config/RepoPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/data/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/links.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/jenkins.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/jenkins.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pact.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pact.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/ibmcloid-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/ibmcloud-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/tools.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/tools.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/activation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/activation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/cluster.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/cluster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/urls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,8 +247,8 @@
     <state x="835" y="333" key="FileChooserDialogImpl/1920.88.1440.877/-2048.23.2048.1080/0.23.1920.1057@0.23.1920.1057" timestamp="1583289412773" />
     <state x="835" y="319" key="FileChooserDialogImpl/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578620917399" />
     <state x="891" y="340" key="FileChooserDialogImpl/2048.23.1680.1027/0.23.2048.1080@0.23.2048.1080" timestamp="1583264498191" />
-    <state width="1864" height="300" key="GridCell.Tab.0.bottom" timestamp="1583290279057">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1864" height="300" key="GridCell.Tab.0.bottom" timestamp="1583339316939">
+      <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state width="1624" height="320" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1581961721288" />
     <state width="1384" height="246" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1580089689299" />
@@ -297,11 +265,12 @@
     <state width="1384" height="138" key="GridCell.Tab.0.bottom/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578708142417" />
     <state width="1864" height="300" key="GridCell.Tab.0.bottom/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1010@0.23.1920.1010" timestamp="1583289152633" />
     <state width="1864" height="300" key="GridCell.Tab.0.bottom/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1011@0.23.1920.1011" timestamp="1583288852467" />
+    <state width="1864" height="300" key="GridCell.Tab.0.bottom/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1012@0.23.1920.1012" timestamp="1583339316939" />
     <state width="1864" height="226" key="GridCell.Tab.0.bottom/2048.23.1680.1027/0.23.2048.1078@0.23.2048.1078" timestamp="1578942003045" />
     <state width="1813" height="324" key="GridCell.Tab.0.bottom/2048.23.1680.1027/0.23.2048.1079@0.23.2048.1079" timestamp="1583165180067" />
     <state width="1931" height="306" key="GridCell.Tab.0.bottom/2048.23.1680.1027/0.23.2048.1080@0.23.2048.1080" timestamp="1583267343647" />
-    <state width="1864" height="300" key="GridCell.Tab.0.center" timestamp="1583290279056">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1864" height="300" key="GridCell.Tab.0.center" timestamp="1583339316938">
+      <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state width="1624" height="320" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1581961721286" />
     <state width="1384" height="246" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1580089689298" />
@@ -318,11 +287,12 @@
     <state width="1384" height="138" key="GridCell.Tab.0.center/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578708142415" />
     <state width="1864" height="300" key="GridCell.Tab.0.center/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1010@0.23.1920.1010" timestamp="1583289152631" />
     <state width="1864" height="300" key="GridCell.Tab.0.center/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1011@0.23.1920.1011" timestamp="1583288852466" />
+    <state width="1864" height="300" key="GridCell.Tab.0.center/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1012@0.23.1920.1012" timestamp="1583339316938" />
     <state width="1864" height="226" key="GridCell.Tab.0.center/2048.23.1680.1027/0.23.2048.1078@0.23.2048.1078" timestamp="1578942003043" />
     <state width="1813" height="324" key="GridCell.Tab.0.center/2048.23.1680.1027/0.23.2048.1079@0.23.2048.1079" timestamp="1583165180067" />
     <state width="1931" height="306" key="GridCell.Tab.0.center/2048.23.1680.1027/0.23.2048.1080@0.23.2048.1080" timestamp="1583267343646" />
-    <state width="1864" height="300" key="GridCell.Tab.0.left" timestamp="1583290279055">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1864" height="300" key="GridCell.Tab.0.left" timestamp="1583339316938">
+      <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state width="1624" height="320" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1581961721286" />
     <state width="1384" height="246" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1580089689296" />
@@ -339,11 +309,12 @@
     <state width="1384" height="138" key="GridCell.Tab.0.left/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578708142415" />
     <state width="1864" height="300" key="GridCell.Tab.0.left/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1010@0.23.1920.1010" timestamp="1583289152630" />
     <state width="1864" height="300" key="GridCell.Tab.0.left/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1011@0.23.1920.1011" timestamp="1583288852465" />
+    <state width="1864" height="300" key="GridCell.Tab.0.left/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1012@0.23.1920.1012" timestamp="1583339316938" />
     <state width="1864" height="226" key="GridCell.Tab.0.left/2048.23.1680.1027/0.23.2048.1078@0.23.2048.1078" timestamp="1578942003043" />
     <state width="1813" height="324" key="GridCell.Tab.0.left/2048.23.1680.1027/0.23.2048.1079@0.23.2048.1079" timestamp="1583165180066" />
     <state width="1931" height="306" key="GridCell.Tab.0.left/2048.23.1680.1027/0.23.2048.1080@0.23.2048.1080" timestamp="1583267343646" />
-    <state width="1864" height="300" key="GridCell.Tab.0.right" timestamp="1583290279057">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1864" height="300" key="GridCell.Tab.0.right" timestamp="1583339316939">
+      <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state width="1624" height="320" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1581961721287" />
     <state width="1384" height="246" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1580089689298" />
@@ -360,6 +331,7 @@
     <state width="1384" height="138" key="GridCell.Tab.0.right/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1008@0.23.1920.1008" timestamp="1578708142416" />
     <state width="1864" height="300" key="GridCell.Tab.0.right/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1010@0.23.1920.1010" timestamp="1583289152632" />
     <state width="1864" height="300" key="GridCell.Tab.0.right/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1011@0.23.1920.1011" timestamp="1583288852467" />
+    <state width="1864" height="300" key="GridCell.Tab.0.right/1920.88.1440.877/-2048.23.2048.1129/0.23.1920.1012@0.23.1920.1012" timestamp="1583339316939" />
     <state width="1864" height="226" key="GridCell.Tab.0.right/2048.23.1680.1027/0.23.2048.1078@0.23.2048.1078" timestamp="1578942003044" />
     <state width="1813" height="324" key="GridCell.Tab.0.right/2048.23.1680.1027/0.23.2048.1079@0.23.2048.1079" timestamp="1583165180067" />
     <state width="1931" height="306" key="GridCell.Tab.0.right/2048.23.1680.1027/0.23.2048.1080@0.23.2048.1080" timestamp="1583267343646" />
