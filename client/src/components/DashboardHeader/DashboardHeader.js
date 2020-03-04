@@ -17,7 +17,7 @@ const DashboardHeader = () => (
   <Header aria-label="Tools Dashboard">
     <SkipToContent />
     <HeaderName element={Link} to="/" prefix="IBM">
-      Garage - Cloud-Native Toolkit
+      Garage Cloud-Native Toolkit
     </HeaderName>
     <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem href="https://cloud.ibm.com/" target="_blank">
