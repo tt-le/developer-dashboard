@@ -1,7 +1,9 @@
-# IBM Garage for Cloud 
+# IBM Garage Cloud Native Toolkit 
 ## Developer Tools Dashboard
 
-A simple dashboard that enables navigation to the tools have have been installed using the `iteration-zero` Terraform asset.
+A simple dashboard that enables navigation to the tools that have been installed
+ using the `iteration-zero` Terraform asset or configured with `igc tool
+ -confi` command line.
 
 ## Build
 
