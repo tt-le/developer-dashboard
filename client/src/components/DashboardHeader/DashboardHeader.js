@@ -14,10 +14,10 @@ import AppSwitcher20 from '@carbon/icons-react/lib/app-switcher/20';
 import { Link } from 'react-router-dom';
 
 const DashboardHeader = () => (
-  <Header aria-label="Tools Dashboard">
+  <Header aria-label="Tools View">
     <SkipToContent />
     <HeaderName element={Link} to="/" prefix="IBM">
-      Garage Cloud-Native Toolkit
+      Garage Cloud Native Toolkit
     </HeaderName>
     <HeaderNavigation aria-label="Repositories">
       <HeaderMenuItem href="https://cloud.ibm.com/" target="_blank">
