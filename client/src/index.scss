@@ -7,7 +7,7 @@ $feature-flags: (
 @import 'content/ResourceCard/resource-card.scss';
 @import 'content/ResourceCard/resource-card-group.scss';
 @import 'content/ArticleCard/article-card.scss';
-@import 'content/StarterKitCard/starterkit-card.scss';
+@import 'src/content/CodePatternCard/codepattern-card.scss';
 
 // Remove overrides once Carbon bugs are fixed upstream.
 
@@ -25,6 +25,59 @@ main {
     padding-right: 1rem;
   }
 }
+
+@media (max-width: 1400px) {
+
+  .bx--resource-card__subtitle {
+    display:none;
+  }
+
+  .bx--resource-card__icon--img {
+    top: 4em;
+  }
+
+  .bx--resource-card__title {
+    display:block;
+    font-size: 1em;
+
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  .bx--resource-card__subtitle {
+    display:none;
+  }
+
+  .bx--resource-card__icon--img {
+    top: 0.5em;
+  }
+
+  .bx--resource-card__title {
+    display:none;
+  }
+
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 660px) {
+
+  .bx--resource-card__subtitle {
+    display:block;
+  }
+
+  .bx--resource-card__title {
+    display:block;
+    font-size: 1.25rem;
+  }
+
+  .bx--resource-card__icon--img {
+    top: 6.5em;
+  }
+
+}
+
 
 /// Padding was introduced in 10.3.0, needs an option to let grid set the viewport gutter
 /// @link https://github.com/carbon-design-system/carbon/issues/3010
@@ -97,3 +150,7 @@ main {
     margin-right: 33%;
   }
 }
+
+
+
+

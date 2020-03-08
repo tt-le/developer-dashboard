@@ -1,0 +1,13 @@
+{
+  "APIURL": "https://cloud.ibm.com",
+  "CLUSTER_NAME": "gsi-dev-ocp311-cluster",
+  "CLUSTER_TYPE": "openshift",
+  "CLUSTER_VERSION": "3.11",
+  "INGRESS_SUBDOMAIN": "gsi-dev-ocp311-cl-834605-7ec5d722a0ab3f463fdc90eeb94dbc70-0000.us-east.containers.appdomain.cloud",
+  "REGION": "us-east",
+  "REGISTRY_NAMESPACE": "gsi-developer-team",
+  "REGISTRY_URL": "us.icr.io",
+  "RESOURCE_GROUP": "gsi-developer-team",
+  "SERVER_URL": "https://c100-e.us-east.containers.cloud.ibm.com:32649",
+  "TLS_SECRET_NAME": "gsi-dev-ocp311-cl-834605-7ec5d722a0ab3f463fdc90eeb94dbc70-0000"
+}

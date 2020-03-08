@@ -1,5 +1,5 @@
 # IBM Garage Cloud Native Toolkit 
-## Developer Tools Dashboard
+## Developer Dashboard
 
 A simple dashboard that enables navigation to the tools that have been installed
  using the `iteration-zero` Terraform asset or configured with `igc tool
@@ -21,6 +21,14 @@ Build and develop with the client code it will open on port `3001`
 cd client
 npm run dev 
 
+```
+
+### Testing API
+
+Use PostMan `newman` CLI
+```bash
+brew install newman
+npm run api:test
 ```
 
 ### Release steps
@@ -72,13 +80,12 @@ git push --tags
 Go to Iteration zero to update the versions of the modules
 
 ```json
-https://github.ibm.com/garage-catalyst/iteration-zero-ibmcloud
+https://github.com/ibm-garage-cloud/ibm-garage-iteration-zero
 ```
 
 Edit and increment the version of the module to the Terraform modules tagged version 
 ```
-https://github.ibm.com/garage-catalyst/iteration-zero-ibmcloud/blob/master/terraform/stages/stage2-catalystdashboard.tf
-```
+https://github.com/ibm-garage-cloud/ibm-garage-iteration-zero/blob/master/terraform/stages/stage2-catalystdashboard.tf```
 
 
 
