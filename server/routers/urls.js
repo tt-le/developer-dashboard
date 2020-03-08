@@ -23,7 +23,9 @@ module.exports = function (app) {
                     codeready:env.CODEREADY_URL,
                     github:env.GITHUB_URL,
                     integration:env.INTEGRATION_URL,
-                    mcm: env.MCM_URL
+                    mcm: env.MCM_URL,
+                    data: env.DATA_URL,
+                    automation: env.AUTOMATION_URL
                 });
             }
 

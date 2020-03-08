@@ -257,7 +257,7 @@ render() {
           </BreadcrumbItem>
         </Breadcrumb>
         <h1 className="landing-page__heading">
-          Development Dashboard
+          Developer Dashboard
         </h1>
       </div>
     </div>
