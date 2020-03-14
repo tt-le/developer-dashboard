@@ -39,11 +39,13 @@ The following steps enable you to release a new version of the Dashboard into Do
 
 Release version of the code
 ```
-git add .
-git commit -m "Update"
-git push
-git tag v1.0.x
-git push --tags
+npm run release
+```
+
+**Note:** In order to create a Release on GitHub, you must first set the GITHUB_TOKEN with the personal access token, e.g.
+
+```
+export GITHUB_TOKEN={personal access token}
 ```
 
 #### Step 2
