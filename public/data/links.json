@@ -17,7 +17,7 @@
     {"title":"Subsystems, Components, and Internals", "subtitle":"How does it work","author":"Link","href":"https://learn.openshift.com/subsystems/","color":"red"},
     {"title":"Service Mesh Workshop with Istio", "subtitle":"Service to Service communication","author":"Link","href":"https://learn.openshift.com/servicemesh/","color":"red"},
     {"title":"Building Operators on OpenShift", "subtitle":"The core to OpenShift 4.x","author":"Link","href":"https://learn.openshift.com/operatorframework/","color":"red"},
-    {"title":"Developing with odo", "subtitle":"","author":"Link","href":"https://www.katacoda.com/openshift/courses/introduction/developing-with-odo","color":"red"}
+    {"title":"Developing with odo", "subtitle":"Getting started with OpenShift do","author":"Link","href":"https://www.katacoda.com/openshift/courses/introduction/developing-with-odo","color":"red"}
   ],
   "cndp" : [
     {"title":"Containers", "subtitle":"Package a Linux program for portability","author":"Web","href":"https://www.ibm.com/cloud/garage/practices/run/tool_ibm_container/","color":"dark"},
