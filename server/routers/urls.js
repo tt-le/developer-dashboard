@@ -25,7 +25,8 @@ module.exports = function (app) {
                     integration:env.INTEGRATION_URL,
                     mcm: env.MCM_URL,
                     data: env.DATA_URL,
-                    automation: env.AUTOMATION_URL
+                    automation: env.AUTOMATION_URL,
+                    jaeger: env.JAEGER_URL,
                 });
             }
 
