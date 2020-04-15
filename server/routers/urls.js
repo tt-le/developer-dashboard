@@ -10,7 +10,6 @@ module.exports = function (app) {
             function respondUrls(res,env) {
                 return res.json({
                     gitlab: "https://" + (env.REGION || 'us-south') + ".git.cloud.ibm.com",
-                    che: env.CHE_URL || "https://che.openshift.io/dashboard/",
                     jenkins: env.JENKINS_URL,
                     pipeline: env.PIPELINE_URL,
                     argocd: env.ARGOCD_URL,
@@ -25,6 +24,14 @@ module.exports = function (app) {
                     integration:env.INTEGRATION_URL,
                     mcm: env.MCM_URL,
                     data: env.DATA_URL,
+                    automation: env.AUTOMATION_URL,
+                    grafana: env.GRAFANA_URL,
+                    prometheus: env.PROMETHEUS_URL,
+                    logdna: env.LOGDNA_URL,
+                    sysdig: env.SYSDIG_URL,
+                    ir: env.IR_URL,
+                    twistlock: env.TWISTLOCK_URL,
+                    aqua: env.AQUA_URL
                     automation: env.AUTOMATION_URL,
                     jaeger: env.JAEGER_URL,
                 });

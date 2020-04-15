@@ -16,8 +16,7 @@
     {"title":"Building Applications On OpenShift", "subtitle":"Use RedHat middleware to deliver value","author":"Link","href":"https://learn.openshift.com/middleware/","color":"red"},
     {"title":"Subsystems, Components, and Internals", "subtitle":"How does it work","author":"Link","href":"https://learn.openshift.com/subsystems/","color":"red"},
     {"title":"Service Mesh Workshop with Istio", "subtitle":"Service to Service communication","author":"Link","href":"https://learn.openshift.com/servicemesh/","color":"red"},
-    {"title":"Building Operators on OpenShift", "subtitle":"The core to OpenShift 4.x","author":"Link","href":"https://learn.openshift.com/operatorframework/","color":"red"},
-    {"title":"Developing with odo", "subtitle":"Getting started with OpenShift do","author":"Link","href":"https://www.katacoda.com/openshift/courses/introduction/developing-with-odo","color":"red"}
+    {"title":"Building Operators on OpenShift", "subtitle":"The core to OpenShift 4.x","author":"Link","href":"https://learn.openshift.com/operatorframework/","color":"red"}
   ],
   "cndp" : [
     {"title":"Containers", "subtitle":"Package a Linux program for portability","author":"Web","href":"https://www.ibm.com/cloud/garage/practices/run/tool_ibm_container/","color":"dark"},
@@ -68,7 +67,7 @@
   "ibmgit" : [
     {"title":"Node Express App", "subtitle":"pre-configured as a microservice with Express.js","language":"Express","href":"https://github.com/IBM/nodejs-express-app","color":"light"},
     {"title":"Java Spring App", "subtitle":"pre-configured as a microservice with Spring","language":"Spring","href":"https://github.com/IBM/java-spring-app","color":"light"},
-    {"title":"Java Liberty App", "subtitle":"pre-configured as a microservice with Liberty","language":"Liberty","href":"https://github.com/ibm-garage-cloud/java-liberty-app","color":"light"},
+    {"title":"Java Liberty App", "subtitle":"pre-configured as a microservice with Liberty","language":"Liberty","href":"https://github.com/IBM/java-liberty-app","color":"light"},
     {"title":"Currency Node App", "subtitle":"Use test-driven development to build a Node.js application","language":"Liberty","href":"https://github.com/IBM/TDD-NodeJS-Containers","color":"light"},
     {"title":"Banking Chatbot App", "subtitle":"A chatbot for banking that uses the Watson services","language":"Node","href":"https://github.com/IBM/watson-banking-chatbot","color":"light"},
     {"title":"Visual Recognition Node App", "subtitle":"The Visual Recognition service uses deep learning algorithms to analyze images for scenes","language":"Node","href":"https://github.com/watson-developer-cloud/visual-recognition-code-pattern","color":"light"},

@@ -30,21 +30,20 @@ const DashboardHeader = () => (
         </HeaderMenuItem>
     </HeaderNavigation>
 
-    <HeaderNavigation aria-label="Code Pattern Repos">
-          <HeaderMenuItem href="https://github.com/orgs/IBM/teams/ibm-garage-cloud/repositories" target="_blank">
-              Code Pattern Repository
-          </HeaderMenuItem>
-    </HeaderNavigation>
-      <HeaderNavigation aria-label="Repositories">
+    <HeaderNavigation aria-label="Repositories">
           <HeaderMenuItem href="https://github.com/ibm-garage-cloud" target="_blank">
               Git Org
           </HeaderMenuItem>
       </HeaderNavigation>
-    <HeaderGlobalBar>
-      <HeaderGlobalAction aria-label="User Avatar">
-        <UserAvatar20 />
-      </HeaderGlobalAction>
-    </HeaderGlobalBar>
+
+      <div className="toolkit-logo">
+          <img
+              className="landing-page__illo"
+              src={`${process.env.PUBLIC_URL}/dashboard.svg`}
+              alt="illustration"
+          />
+      </div>
+
   </Header>
 );
 
