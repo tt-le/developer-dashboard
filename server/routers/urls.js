@@ -30,14 +30,11 @@ module.exports = function (app) {
                     logdna: env.LOGDNA_URL,
                     sysdig: env.SYSDIG_URL,
                     ir: env.IR_URL,
-                    twistlock: env.TWISTLOCK_URL,
-                    aqua: env.AQUA_URL
-                    automation: env.AUTOMATION_URL,
                     jaeger: env.JAEGER_URL,
                 });
             }
 
-            if (process.env.npm_lifecycle_event === "dev") {
+            if (process.env.NODE_ENV === "development") {
                 respondUrls(res,process.env);
             } else {
                 try {

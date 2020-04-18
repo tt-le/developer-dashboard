@@ -6,9 +6,7 @@ import CodePatternCard from '../CodePatternCard';
 import _ from 'lodash';
 
 import {
-  Breadcrumb,
   BreadcrumbItem,
-  Button,
   Tabs,
   Tab,
   CodeSnippet,
@@ -257,10 +255,26 @@ render() {
   return <div className="bx--grid bx--grid--full-width landing-page">
     <div className="bx--row landing-page__banner">
       <div className="bx--col-lg-16">
-        <h1 className="landing-page__heading">
-          Developer Dashboard
-        </h1>
 
+         <div class="clusterInfo">
+            <AccordionItem
+            title="Developer Dashboard" >
+                <div>
+                    <ul style={{"padding": "5px 10px"}}>
+                    <li style={{"padding": "5px 0"}}><strong>CLUSTER_TYPE:</strong> {_.capitalize(this.state.cluster.CLUSTER_TYPE)}
+                        </li>
+                        <li style={{"padding": "5px 0"}}><strong>CLUSTER_VERSION:</strong> {this.state.cluster.CLUSTER_VERSION}
+                        </li>
+                        <li style={{"padding": "5px 0"}}>WEB_CONSOLE: <a class="consoleLink"
+                        href={this.state.cluster.SERVER_URL + "/console"}>{this.state.cluster.SERVER_URL}/console</a>
+                        </li>
+                        <li style={{"padding": "5px 0"}}>REGION: {this.state.cluster.REGION}</li>
+                        <li style={{"padding": "5px 0"}}>RESOURCE_GROUP: {this.state.cluster.RESOURCE_GROUP}</li>
+                        <li style={{"padding": "5px 0"}}>IMAGE_REGISTRY: {this.state.cluster.REGISTRY_URL + "/" + this.state.cluster.REGISTRY_NAMESPACE}</li>
+                    </ul>
+                </div>
+            </AccordionItem>
+        </div>
       </div>
 
     </div>
@@ -270,37 +284,6 @@ render() {
           <Tab {...props.tab} label="Dashboard">
             <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div className="bx--row landing-page__tab-content">
-                <div>
-                  {/*
-                  <AccordionItem
-                      title="Cluster Information"
-                      open="true" >
-
-                    <div style={{
-                      "background-color": "#000",
-                      color: "#fff",
-                      padding: "10px 10px",
-                      "display": this.state.cluster.CLUSTER_TYPE ? "block" : "none",
-                      "margin-bottom": "10px"
-                    }}>
-                      <ul style={{"padding": "5px 10px"}}>
-                        <li style={{"padding": "5px 0"}}><strong>CLUSTER_TYPE:</strong> {_.capitalize(this.state.cluster.CLUSTER_TYPE)}
-                        </li>
-                        <li style={{"padding": "5px 0"}}><strong>CLUSTER_VERSION:</strong> {this.state.cluster.CLUSTER_VERSION}
-                        </li>
-                        <li style={{"padding": "5px 0"}}>WEB_CONSOLE: <a style={{color: "#fff"}}
-                                                                         href={this.state.cluster.SERVER_URL + "/console"}>{this.state.cluster.SERVER_URL}/console</a>
-                        </li>
-                        <li style={{"padding": "5px 0"}}>REGION: {this.state.cluster.REGION}</li>
-                        <li style={{"padding": "5px 0"}}>RESOURCE_GROUP: {this.state.cluster.RESOURCE_GROUP}</li>
-                        <li style={{"padding": "5px 0"}}>IMAGE_REGISTRY: {this.state.cluster.REGISTRY_URL + "/" + this.state.cluster.REGISTRY_NAMESPACE}</li>
-                      </ul>
-                    </div>
-
-                  </AccordionItem>
-                  */}
-
-                </div>
 
                 <div className="bx--col-md-8 bx--col-lg-8">
 
@@ -308,15 +291,12 @@ render() {
                     Developer Tools
                   </h2>
                   <p className="landing-page__p">
-                    The dashboard gives you easy access to the provisioned tools in your development&nbsp;
+                    Tools provisioned in your development&nbsp;
                     {_.capitalize(clusterType)} cluster.
                   </p>
 
                   <div className="bx--row resource-card-group">
-
-
                     {getTools(this.state.tools, this.state.componentUrls, true)}
-
                   </div>
 
                 </div>
@@ -327,7 +307,7 @@ render() {
                     Security & Operational Tools
                   </h2>
                   <p className="landing-page__p">
-                    These are the tools outside your development cluster and support your operations and security needs for your&nbsp;
+                    Tools for operations and security for your&nbsp;
                     {_.capitalize(clusterType)} cluster.
                   </p>
 

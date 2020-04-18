@@ -166,6 +166,34 @@ main {
   }
 }
 
+.clusterInfo {
+  width: 65%;
+}
+
+.clusterInfo li {
+    list-style-type: none;
+}
+
+.clusterInfo .bx--accordion__title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0;
+  margin-left: 0px;
+}
+
+.clusterInfo .bx--accordion__item {
+  border-top: 0px;
+}
+
+.clusterInfo .bx--accordion__item:last-child {
+  border-bottom: 0px;
+}
+
+.clusterInfo .consoleLink {
+    text-decoration: none;
+    color: #0043ce;
+}
 
 
 
