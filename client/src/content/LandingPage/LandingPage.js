@@ -281,19 +281,11 @@ render() {
     <div className="bx--row landing-page__r2">
       <div className="bx--col bx--no-gutter">
         <Tabs className="top" {...props.tabs} aria-label="Tab navigation">
-          <Tab {...props.tab} label="Dashboard">
+          <Tab {...props.tab} label="Tools">
             <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div className="bx--row landing-page__tab-content">
 
                 <div className="bx--col-md-8 bx--col-lg-8">
-
-                  <h2 className="landing-page__subheading">
-                    Developer Tools
-                  </h2>
-                  <p className="landing-page__p">
-                    Tools provisioned in your development&nbsp;
-                    {_.capitalize(clusterType)} cluster.
-                  </p>
 
                   <div className="bx--row resource-card-group">
                     {getTools(this.state.tools, this.state.componentUrls, true)}
@@ -303,16 +295,7 @@ render() {
 
                 <div className="bx--col-md-8  bx--col-lg-8">
 
-                  <h2 className="landing-page__subheading">
-                    Security & Operational Tools
-                  </h2>
-                  <p className="landing-page__p">
-                    Tools for operations and security for your&nbsp;
-                    {_.capitalize(clusterType)} cluster.
-                  </p>
-
                   <div className="bx--row resource-card-group">
-
 
                     {getTools(this.state.tools, this.state.componentUrls, false)}
 
