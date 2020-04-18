@@ -309,7 +309,6 @@ render() {
               <div className="bx--row landing-page__tab-content">
                 <div className="bx--col-lg-16">
 
-
                   <h2 className="landing-page__subheading">
                     Containers and Kubernetes
                   </h2>

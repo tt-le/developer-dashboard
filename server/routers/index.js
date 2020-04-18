@@ -3,9 +3,11 @@
 module.exports = function(app, server){
 
     require('./public')(app);
+    require('./settings')(app);
     require('./health')(app);
     require('./urls')(app);
     require('./tools')(app);
     require('./cluster')(app);
     require('./activation')(app);
+
 };

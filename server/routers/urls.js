@@ -1,6 +1,7 @@
 var express = require('express');
 const _ = require('lodash');
 const kubernetesClient = require('./kubernetes-client');
+const tools = require("../config/tools.json");
 
 module.exports = function (app) {
     var router = express.Router();

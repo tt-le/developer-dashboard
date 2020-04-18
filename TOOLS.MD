@@ -1,5 +1,17 @@
 ## Configuration for Running Server
 
+To run the tools server you need to prepare you runtime env with the follow
+ ENV variables set. 
+
+### To Override some default settings add the following envs to your deployment 
+
+```
+DASHBOARD_TITLE=GSI Lab Sandbox;
+CLOUD_TITLE=Azure Console;
+CLOUD_URL=https://azure.microsoft.com/en-us/
+LINKS_URL=public/data/links.json
+```
+
 ### Default
 ```
 PIPELINE_URL=dummy
