@@ -27,7 +27,7 @@
     "start": "node server/server.js",
     "debug": "chmod +x run-debug && ./run-debug",
     "test": "nyc mocha --exit",
-    "api:test": "newman run test/developer-dashboard.postman_collection.json",
+    "api:test": "newman run test/dashboard_collection.json",
     "dev": "nodemon server/server.js",
     "build": "cd client && npm run build",
     "build:image": "./scripts/build.sh $npm_package_name $npm_package_version",

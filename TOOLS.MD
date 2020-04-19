@@ -10,7 +10,7 @@ DASHBOARD_TITLE=GSI Lab Sandbox
 DASHBOARD_PREFIX=IBM
 CLOUD_TITLE=Azure Console
 CLOUD_URL=https://azure.microsoft.com/en-us/
-LINKS_URL=public/data/links.json
+LINKS_URL=http://localhost:3001/data/links.json
 ```
 
 ### Default

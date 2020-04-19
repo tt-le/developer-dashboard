@@ -278,24 +278,32 @@ render() {
         <Tabs className="top" {...props.tabs} aria-label="Tab navigation">
           <Tab {...props.tab} label="Tools">
             <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
-              <div className="bx--row landing-page__tab-content">
 
-                <div className="bx--col-md-8 bx--col-lg-8">
-
-                  <div className="bx--row resource-card-group">
-                    {getTools(this.state.tools, this.state.componentUrls, true)}
-                  </div>
-
+                <div className="bx--row">
+                    <div className="bx--col-lg-16">
+                        <br></br>
+                        <h2 className="landing-page__subheading">
+                            Tools
+                        </h2>
+                        <br></br>
+                        <p>
+                            The following tools have been been configured in your dashboard
+                        </p>
+                        <br></br>
+                    </div>
                 </div>
 
-                <div className="bx--col-md-8  bx--col-lg-8">
-
-                  <div className="bx--row resource-card-group">
-
-                    {getTools(this.state.tools, this.state.componentUrls, false)}
-
+                <div className="bx--row landing-page__tab-content">
+                  <div className="bx--col-md-8 bx--col-lg-8">
+                      <div className="bx--row resource-card-group">
+                        {getTools(this.state.tools, this.state.componentUrls, true)}
+                      </div>
                   </div>
-                </div>
+                  <div className="bx--col-md-8  bx--col-lg-8">
+                      <div className="bx--row resource-card-group">
+                        {getTools(this.state.tools, this.state.componentUrls, false)}
+                      </div>
+                  </div>
               </div>
             </div>
           </Tab>
@@ -385,22 +393,22 @@ render() {
                       {
                         `ibmcloud login -r ${this.state.cluster.REGION} -g ${this.state.cluster.RESOURCE_GROUP}
 kubectl get pods
-npm i -g @ibmgaragecloud/cloud-native-toolkit-cli
-git clone <code pattern>
-cd <code pattern>
-igc enable | git add . | git commit -m "Update"" | git push
-igc pipeline -n <namespace> [ --tekton ]`}
+npm install -g @ibmgaragecloud/cloud-native-toolkit-cli
+git clone <code pattern> | cd <code pattern>
+kubectl enable | git add . | git commit -m "Update"" | git push
+kubectl sync <namespace> --dev
+kubectl pipeline`}
                     </CodeSnippet>
                     <CodeSnippet type="multi" {...multilineProps}
                                  style={{display: this.state.cluster.CLUSTER_TYPE === "openshift" ? "block" : "none"}}>
                       {
                         `oc login
 oc get pods
-npm i -g @ibmgaragecloud/cloud-native-toolkit-cli
-git clone <code pattern>
-cd <code pattern>
-igc enable | git add . | git commit -m "Update"" | git push
-igc pipeline -n <namespace> [ --tekton ]
+npm install -g @ibmgaragecloud/cloud-native-toolkit-cli
+git clone <code pattern> | cd <code pattern>
+oc enable | git add . | git commit -m "Update"" | git push
+oc sync <project> --dev
+oc pipeline 
 `}
                     </CodeSnippet>
                   </div>

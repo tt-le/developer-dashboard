@@ -6,6 +6,26 @@
 	},
 	"item": [
 		{
+			"name": "Tools Icon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tools/icon/tekton",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tools",
+						"icon",
+						"tekton"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Tools",
 			"request": {
 				"method": "GET",
@@ -83,13 +103,52 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/activation",
+					"raw": "localhost:3000/activation/links",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"activation"
+						"activation",
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/settings",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"settings"
+					]
+				},
+				"description": "Get the settings for the Dashboard"
+			},
+			"response": []
+		},
+		{
+			"name": "Links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/activation/links",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"activation",
+						"links"
 					]
 				}
 			},
