@@ -1,0 +1,6 @@
+{
+  "DASHBOARD_PREFIX":"IBM",
+  "DASHBOARD_TITLE":"Garage Cloud Native Toolkit",
+  "CLOUD_TITLE": "IBM Cloud Console",
+  "CLOUD_URL":"https://cloud.ibm.com/"
+}

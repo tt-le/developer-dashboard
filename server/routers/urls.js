@@ -1,6 +1,7 @@
 var express = require('express');
 const _ = require('lodash');
 const kubernetesClient = require('./kubernetes-client');
+const tools = require("../config/tools.json");
 
 module.exports = function (app) {
     var router = express.Router();
@@ -8,9 +9,8 @@ module.exports = function (app) {
     router.get('/', function (req, res, next) {
 
             function respondUrls(res,env) {
-                return res.json({
+                var urls = {
                     gitlab: "https://" + (env.REGION || 'us-south') + ".git.cloud.ibm.com",
-                    che: env.CHE_URL || "https://che.openshift.io/dashboard/",
                     jenkins: env.JENKINS_URL,
                     pipeline: env.PIPELINE_URL,
                     argocd: env.ARGOCD_URL,
@@ -26,11 +26,17 @@ module.exports = function (app) {
                     mcm: env.MCM_URL,
                     data: env.DATA_URL,
                     automation: env.AUTOMATION_URL,
+                    grafana: env.GRAFANA_URL,
+                    prometheus: env.PROMETHEUS_URL,
+                    logdna: env.LOGDNA_URL,
+                    sysdig: env.SYSDIG_URL,
+                    ir: env.IR_URL,
                     jaeger: env.JAEGER_URL,
-                });
+                };
+                return res.json(urls);
             }
 
-            if (process.env.npm_lifecycle_event === "dev") {
+            if (process.env.NODE_ENV === "development") {
                 respondUrls(res,process.env);
             } else {
                 try {

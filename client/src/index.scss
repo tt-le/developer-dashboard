@@ -78,6 +78,21 @@ main {
 
 }
 
+.toolkit-logo {
+    left: auto;
+    width: 7em;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* align-items: flex-start; */
+    height: 35px;
+    /* align-content: flex-end; */
+    /* display: inline-block; */
+    position: absolute;
+    right: 0;
+    /* vertical-align: middle; */
+    z-index: -999;
+    margin-right: 30px;
+}
 
 /// Padding was introduced in 10.3.0, needs an option to let grid set the viewport gutter
 /// @link https://github.com/carbon-design-system/carbon/issues/3010
@@ -151,6 +166,34 @@ main {
   }
 }
 
+.clusterInfo {
+  width: 65%;
+}
+
+.clusterInfo li {
+    list-style-type: none;
+}
+
+.clusterInfo .bx--accordion__title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0;
+  margin-left: 0px;
+}
+
+.clusterInfo .bx--accordion__item {
+  border-top: 0px;
+}
+
+.clusterInfo .bx--accordion__item:last-child {
+  border-bottom: 0px;
+}
+
+.clusterInfo .consoleLink {
+    text-decoration: none;
+    color: #0043ce;
+}
 
 
 

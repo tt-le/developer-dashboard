@@ -11,7 +11,7 @@ module.exports = function (app) {
     router.get('/', function (req, res, next) {
 
         // Check if we are running locally
-        if (process.env.npm_lifecycle_event === "dev") {
+        if (process.env.NODE_ENV === "development") {
             res.json(clusterInfo);
         } else {
             try {

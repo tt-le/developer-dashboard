@@ -2,15 +2,14 @@ import React from 'react';
 import ResourceCard from '../ResourceCard';
 import ArticleCard from '../ArticleCard';
 import CodePatternCard from '../CodePatternCard';
+
 import _ from 'lodash';
 
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
   Tabs,
   Tab,
-  CodeSnippet
+  CodeSnippet,
+  AccordionItem,
 } from 'carbon-components-react';
 
 const props = {
@@ -134,7 +133,7 @@ render() {
 
   }
 
-  function getTools(tools,urls) {
+  function getTools(tools,urls,incluster) {
 
     if (_.isUndefined(tools) && _.isUndefined(urls))
       return [];
@@ -142,28 +141,29 @@ render() {
     let installedTools = []
 
     for(var i=0;i<tools.length;i++) {
-
       const tool = tools[i];
       console.log(i+":"+tool.reference+":"+isComponentAvailable(tool.reference))
 
       if (isComponentAvailable(tool.reference)) {
         const url = urls[tool.reference];
-        installedTools.push(
-            <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
-              <ResourceCard
-                  subTitle={tool.subTitle}
-                  title={tool.title}
-                  aspectRatio="2:1"
-                  href={buildUrl(tool.reference)}
-              >
-                <img
-                    className="resource-img"
-                    src={tool.iconBase64}
-                    alt={tool.alt}
-                />
-              </ResourceCard>
-            </div>
-        );
+        if(tool.incluster === incluster) {
+          installedTools.push(
+              <div className="bx--column bx--col-md-4  bx--no-gutter-sm">
+                <ResourceCard
+                    subTitle={tool.subTitle}
+                    title={tool.title}
+                    aspectRatio="2:1"
+                    href={buildUrl(tool.reference)}
+                >
+                  <img
+                      className="resource-img"
+                      src={tool.iconBase64}
+                      alt={tool.alt}
+                  />
+                </ResourceCard>
+              </div>
+          );
+        }
       }
     }
 
@@ -237,7 +237,6 @@ render() {
     return !!componentUrls[val];
   }
 
-
   if (error) {
         return <p>{error.message}</p>;
   }
@@ -251,64 +250,60 @@ render() {
   return <div className="bx--grid bx--grid--full-width landing-page">
     <div className="bx--row landing-page__banner">
       <div className="bx--col-lg-16">
-        <Breadcrumb noTrailingSlash aria-label="Page navigation">
-          <BreadcrumbItem>
-            <a href="https://github.com/ibm-garage-cloud/">Project Info</a>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <h1 className="landing-page__heading">
-          Developer Dashboard
-        </h1>
+
+         <div class="clusterInfo">
+            <AccordionItem
+            title="Developer Dashboard" >
+                <div>
+                    <ul style={{"padding": "5px 10px"}}>
+                    <li style={{"padding": "5px 0"}}><strong>CLUSTER_TYPE:</strong> {_.capitalize(this.state.cluster.CLUSTER_TYPE)}
+                        </li>
+                        <li style={{"padding": "5px 0"}}><strong>CLUSTER_VERSION:</strong> {this.state.cluster.CLUSTER_VERSION}
+                        </li>
+                        <li style={{"padding": "5px 0"}}>WEB_CONSOLE: <a class="consoleLink"
+                        href={this.state.cluster.SERVER_URL + "/console"}>{this.state.cluster.SERVER_URL}/console</a>
+                        </li>
+                        <li style={{"padding": "5px 0"}}>REGION: {this.state.cluster.REGION}</li>
+                        <li style={{"padding": "5px 0"}}>RESOURCE_GROUP: {this.state.cluster.RESOURCE_GROUP}</li>
+                        <li style={{"padding": "5px 0"}}>IMAGE_REGISTRY: {this.state.cluster.REGISTRY_URL + "/" + this.state.cluster.REGISTRY_NAMESPACE}</li>
+                    </ul>
+                </div>
+            </AccordionItem>
+        </div>
       </div>
+
     </div>
     <div className="bx--row landing-page__r2">
       <div className="bx--col bx--no-gutter">
         <Tabs className="top" {...props.tabs} aria-label="Tab navigation">
-          <Tab {...props.tab} label="Dashboard">
+          <Tab {...props.tab} label="Tools">
             <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
-              <div className="bx--row landing-page__tab-content">
-                <div className="bx--col-md-4 bx--col-lg-7">
-                  <h2 className="landing-page__subheading">
-                    Tools Dashboard
-                  </h2>
-                  <p className="landing-page__p">
-                    The dashboard gives you easy access to the provisioned tools in your development&nbsp;
-                    {_.capitalize(clusterType)} cluster.
-                  </p>
-                  <img
-                      className="landing-page__illo"
-                      src={`${process.env.PUBLIC_URL}/dashboard.svg`}
-                      alt="illustration"
-                  />
-                  <p></p>
-                </div>
-                <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
-                  <div style={{
-                    "background-color": "#000",
-                    color: "#fff",
-                    padding: "10px 10px",
-                    "display": this.state.cluster.CLUSTER_TYPE ? "block" : "none",
-                    "margin-bottom": "10px"
-                  }}>
-                    <ul style={{"padding": "5px 10px"}}>
-                      <li style={{"padding": "5px 0"}}><strong>CLUSTER_TYPE:</strong> {_.capitalize(this.state.cluster.CLUSTER_TYPE)}
-                      </li>
-                      <li style={{"padding": "5px 0"}}><strong>CLUSTER_VERSION:</strong> {this.state.cluster.CLUSTER_VERSION}
-                      </li>
-                      <li style={{"padding": "5px 0"}}>WEB_CONSOLE: <a style={{color: "#fff"}}
-                                                                       href={this.state.cluster.SERVER_URL + "/console"}>{this.state.cluster.SERVER_URL}/console</a>
-                      </li>
-                      <li style={{"padding": "5px 0"}}>REGION: {this.state.cluster.REGION}</li>
-                      <li style={{"padding": "5px 0"}}>RESOURCE_GROUP: {this.state.cluster.RESOURCE_GROUP}</li>
-                      <li style={{"padding": "5px 0"}}>IMAGE_REGISTRY: {this.state.cluster.REGISTRY_URL + "/" + this.state.cluster.REGISTRY_NAMESPACE}</li>
-                    </ul>
-                  </div>
-                  <div className="bx--row resource-card-group">
 
-                    {getTools(this.state.tools, this.state.componentUrls)}
-
-                  </div>
+                <div className="bx--row">
+                    <div className="bx--col-lg-16">
+                        <br></br>
+                        <h2 className="landing-page__subheading">
+                            Tools
+                        </h2>
+                        <br></br>
+                        <p>
+                            The following tools have been been configured in your dashboard
+                        </p>
+                        <br></br>
+                    </div>
                 </div>
+
+                <div className="bx--row landing-page__tab-content">
+                  <div className="bx--col-md-8 bx--col-lg-8">
+                      <div className="bx--row resource-card-group">
+                        {getTools(this.state.tools, this.state.componentUrls, true)}
+                      </div>
+                  </div>
+                  <div className="bx--col-md-8  bx--col-lg-8">
+                      <div className="bx--row resource-card-group">
+                        {getTools(this.state.tools, this.state.componentUrls, false)}
+                      </div>
+                  </div>
               </div>
             </div>
           </Tab>
@@ -316,7 +311,6 @@ render() {
             <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div className="bx--row landing-page__tab-content">
                 <div className="bx--col-lg-16">
-
 
                   <h2 className="landing-page__subheading">
                     Containers and Kubernetes
@@ -399,22 +393,22 @@ render() {
                       {
                         `ibmcloud login -r ${this.state.cluster.REGION} -g ${this.state.cluster.RESOURCE_GROUP}
 kubectl get pods
-npm i -g @ibmgaragecloud/cloud-native-toolkit-cli
-git clone <code pattern>
-cd <code pattern>
-igc enable | git add . | git commit -m "Update"" | git push
-igc pipeline -n <namespace> [ --tekton ]`}
+npm install -g @ibmgaragecloud/cloud-native-toolkit-cli
+git clone <code pattern> | cd <code pattern>
+kubectl enable | git add . | git commit -m "Update"" | git push
+kubectl sync <namespace> --dev
+kubectl pipeline`}
                     </CodeSnippet>
                     <CodeSnippet type="multi" {...multilineProps}
                                  style={{display: this.state.cluster.CLUSTER_TYPE === "openshift" ? "block" : "none"}}>
                       {
                         `oc login
 oc get pods
-npm i -g @ibmgaragecloud/cloud-native-toolkit-cli
-git clone <code pattern>
-cd <code pattern>
-igc enable | git add . | git commit -m "Update"" | git push
-igc pipeline -n <namespace> [ --tekton ]
+npm install -g @ibmgaragecloud/cloud-native-toolkit-cli
+git clone <code pattern> | cd <code pattern>
+oc enable | git add . | git commit -m "Update"" | git push
+oc sync <project> --dev
+oc pipeline 
 `}
                     </CodeSnippet>
                   </div>
