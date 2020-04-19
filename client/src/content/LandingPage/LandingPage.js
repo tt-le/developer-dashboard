@@ -6,13 +6,10 @@ import CodePatternCard from '../CodePatternCard';
 import _ from 'lodash';
 
 import {
-  BreadcrumbItem,
   Tabs,
   Tab,
   CodeSnippet,
-  Accordion,
   AccordionItem,
-  AccordionSkeleton
 } from 'carbon-components-react';
 
 const props = {
@@ -144,7 +141,6 @@ render() {
     let installedTools = []
 
     for(var i=0;i<tools.length;i++) {
-
       const tool = tools[i];
       console.log(i+":"+tool.reference+":"+isComponentAvailable(tool.reference))
 
@@ -240,7 +236,6 @@ render() {
   function isComponentAvailable(val) {
     return !!componentUrls[val];
   }
-
 
   if (error) {
         return <p>{error.message}</p>;

@@ -9,7 +9,7 @@ module.exports = function (app) {
     router.get('/', function (req, res, next) {
 
             function respondUrls(res,env) {
-                return res.json({
+                var urls = {
                     gitlab: "https://" + (env.REGION || 'us-south') + ".git.cloud.ibm.com",
                     jenkins: env.JENKINS_URL,
                     pipeline: env.PIPELINE_URL,
@@ -32,7 +32,8 @@ module.exports = function (app) {
                     sysdig: env.SYSDIG_URL,
                     ir: env.IR_URL,
                     jaeger: env.JAEGER_URL,
-                });
+                };
+                return res.json(urls);
             }
 
             if (process.env.NODE_ENV === "development") {

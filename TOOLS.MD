@@ -6,8 +6,9 @@ To run the tools server you need to prepare you runtime env with the follow
 ### To Override some default settings add the following envs to your deployment 
 
 ```
-DASHBOARD_TITLE=GSI Lab Sandbox;
-CLOUD_TITLE=Azure Console;
+DASHBOARD_TITLE=GSI Lab Sandbox
+DASHBOARD_PREFIX=IBM
+CLOUD_TITLE=Azure Console
 CLOUD_URL=https://azure.microsoft.com/en-us/
 LINKS_URL=public/data/links.json
 ```
