@@ -1,6 +1,6 @@
 {
   "name": "developer-dashboard",
-  "version": "1.0.25",
+  "version": "1.0.28",
   "org": "IBM Garage",
   "description": "IBM Garage Cloud Native Toolkit",
   "private": true,
