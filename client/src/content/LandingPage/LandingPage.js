@@ -138,12 +138,9 @@ render() {
     if (_.isUndefined(tools) && _.isUndefined(urls))
       return [];
 
-    let installedTools = []
-
+    var installedTools = []
     for(var i=0;i<tools.length;i++) {
       const tool = tools[i];
-      console.log(i+":"+tool.reference+":"+isComponentAvailable(tool.reference))
-
       if (isComponentAvailable(tool.reference)) {
         const url = urls[tool.reference];
         if(tool.incluster === incluster) {
