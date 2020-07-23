@@ -3,7 +3,7 @@
 
 A simple dashboard that enables navigation to the tools that have been installed
  using the `iteration-zero` Terraform asset or configured with `igc tool
- -confi` command line.
+ -config` command line.
 
 ## Build
 
