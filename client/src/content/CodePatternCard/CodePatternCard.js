@@ -120,18 +120,25 @@ export default class CodePatternCard extends React.Component {
             {title ? (
               <h4 className={`${prefix}--article-card__title`}>
                   <div className={`${prefix}--starterkit-card__icon--action`}>
-                    {language === 'TypeScript' ?(
+                    {language === 'TypeScript' || language==='Express' ?(
                       <img
                         src={`${process.env.PUBLIC_URL}/node-32.png`}
                         alt="Node"
                       />            
                     ) : null}
-                    {language === 'Java' ?(
+                    {language === 'Java' || language === 'Spring' || language === 'Liberty' ?(
                       <img
                         src={`${process.env.PUBLIC_URL}/java-32.png`}
                         alt="Java"
                       />            
                     ) : null}
+                    {language === 'Go' ?(
+                        <img
+                            src={`${process.env.PUBLIC_URL}/go.png`}
+                            alt="Go"
+                        />
+                    ) : null}
+
                     {language === 'React' || language === "Angular" ?(
                       <img
                         src={`${process.env.PUBLIC_URL}/webui-32.png`}
