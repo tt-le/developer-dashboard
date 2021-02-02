@@ -28,7 +28,7 @@ module.exports = function (app) {
                     prometheus: env.PROMETHEUS_URL,
                     logdna: env.LOGDNA_URL,
                     sysdig: env.SYSDIG_URL,
-                    ir: env.IR_URL,
+                    ir: env.REGISTRY_URL || env.IR_URL,
                     jaeger: env.JAEGER_URL,
                 };
 
